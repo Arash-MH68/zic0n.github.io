@@ -1,27 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zic0n – Coming Soon</title>
+  <!-- ======= Meta ======= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zic0n Engineering — Geotechnical • Pavement • Data-Driven Design</title>
+  <meta name="description" content="Zic0n Engineering delivers advanced geotechnical, pavement, and data-driven solutions for energy, transportation, water, and heavy civil projects." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- ======= Tailwind (CDN) ======= -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ======= Fonts / Icons ======= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- ======= Open Graph ======= -->
+  <meta property="og:title" content="Zic0n Engineering — Geotechnical • Pavement • Data-Driven Design" />
+  <meta property="og:description" content="Advanced geotechnical, pavement, and data-driven solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Zic0n+Engineering" />
+  <meta property="og:url" content="https://zic0n.com" />
+
+  <!-- ======= Basic Styles ======= -->
   <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
+    :root {
+      --bg: #0b1220;
+      --card: #111a2c;
+      --muted: #94a3b8;
+      --brand: #22d3ee; /* cyan-400 */
+      --accent: #60a5fa; /* blue-400 */
     }
-    h1 { font-size: 3em; margin: 0; }
-    p { color: #aaa; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: #e5e7eb; }
+    .glass { background: linear-gradient(140deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.08); }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); }
+    .gradient-text { background: linear-gradient(90deg, var(--brand), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .tag { border: 1px dashed rgba(255,255,255,0.15); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+    .section { scroll-margin-top: 90px; }
   </style>
 </head>
-<body>
-  <h1>🚀 Zic0n</h1>
-  <p>Our website is coming soon. Stay tuned!</p>
+
+<body class="antialiased">
+
+  <!-- ======= Header / Nav ======= -->
+  <header class="sticky top-0 z-50 bg-[#0b1220]/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="h-8 w-8 rounded-lg bg-cyan-400/20 grid place-items-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12L12 3l9 9-9 9-9-9Z" stroke="#22d3ee" stroke-width="1.5"/><path d="M12 7v10M7 12h10" stroke="#60a5fa" stroke-width="1.5"/></svg>
+        </div>
+        <span class="font-semibold tracking-wide">Zic0n Engineering</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#sectors" class="hover:text-white">Sectors</a>
+        <a href="#capabilities" class="hover:text-white">Capabilities</a>
+        <a href="#projects" class="hover:text-white">Projects</a>
+        <a href="#credentials" class="hover:text-white">Credentials</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-white/10" aria-label="Open menu">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
+      <nav class="px-4 py-3 space-y-2 text-slate-300">
+        <a href="#about" class="block hover:text-white">About</a>
+        <a href="#services" class="block hover:text-white">Services</a>
+        <a href="#sectors" class="block hover:text-white">Sectors</a>
+        <a href="#capabilities" class="block hover:text-white">Capabilities</a>
+        <a href="#projects" class="block hover:text-white">Projects</a>
+        <a href="#credentials" class="block hover:text-white">Credentials</a>
+        <a href="#contact" class="block hover:text-white">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= Hero ======= -->
+  <section class="relative section">
+    <div class="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_-20%,rgba(34,211,238,0.20),transparent_60%)]"></div>
+    <div class="max-w-7xl mx-auto px-6 py-20 sm:py-28 relative">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-cyan-300/80 tag rounded-full px-3 py-1">
+            <span class="h-2 w-2 rounded-full bg-cyan-400"></span> From soil to systems
+          </p>
+          <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
+            Data-Driven <span class="gradient-text">Geotechnical & Pavement</span> Engineering
+          </h1>
+          <p class="mt-5 text-slate-300/90 max-w-xl">
+            Zic0n partners with owners, EPCs, and designers to deliver resilient, constructible solutions for
+            energy, transportation, water, and heavy civil projects—combining classic geomechanics with
+            modern analytics and automation.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" class="px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition shadow-soft">Request a consultation</a>
+            <a href="#projects" class="px-5 py-3 rounded-lg border border-white/15 hover:bg-white/5">View project highlights</a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-3 gap-6 text-center">
+            <!-- EDIT ME: Replace stats -->
+            <div class="glass rounded-xl p-4">
+              <div class="text-3xl font-extrabold">10+ yrs</div>
+              <div class="text-xs text-slate-400">Geo/Pavement Experience</div>
+            </div>
+            <div class="glass rounded-xl p-4">
+              <div class="text-3xl font-extrabold">80+ </div>
+              <div class="text-xs text-slate-400">Advanced Analyses</div>
+            </div>
+            <div class="glass rounded-xl p-4">
+              <div class="text-3xl font-extrabold">50+ </div>
+              <div class="text-xs text-slate-400">Retaining Systems</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="card rounded-2xl p-6 shadow-soft">
+            <div class="aspect-video rounded-xl bg-gradient-to-br from-cyan-400/10 to-blue-400/10 border border-white/10 grid place-items-center">
+              <!-- Decorative schematic -->
+              <svg viewBox="0 0 600 300" class="w-[92%] h-[92%]">
+                <defs>
+                  <linearGradient id="g1" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.9"/>
+                  </linearGradient>
+                </defs>
+                <rect x="20" y="30" width="560" height="240" rx="14" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.4"/>
+                <path d="M50 180 Q 150 120 250 160 T 550 150" fill="none" stroke="#22d3ee" stroke-width="2"/>
+                <path d="M50 210 Q 150 150 250 190 T 550 185" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.8"/>
+                <circle cx="160" cy="150" r="4" fill="#22d3ee"/><circle cx="320" cy="172" r="4" fill="#60a5fa"/>
+                <text x="50" y="60" fill="#cbd5e1" font-size="12">Foundation Response</text>
+                <text x="50" y="80" fill="#cbd5e1" font-size="12">Thermal/Adfreeze • Settlement • Stability</text>
+              </svg>
+            </div>
+            <p class="text-slate-300/90 mt-4 text-sm">
+              <!-- EDIT ME: One-sentence elevator pitch -->
+              We translate subsurface uncertainty into clear decisions—fusing field data, lab testing, and physics-based models with practical construction know-how.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= About ======= -->
+  <section id="about" class="section py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold mb-3">About Zic0n</h2>
+          <p class="text-slate-300/90 leading-relaxed">
+            Zic0n is an applied engineering practice focused on geotechnical, pavement, and materials
+            engineering—complemented by modern analytics and automation. We support owners and
+            design teams from early planning through construction and performance verification.
+          </p>
+          <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-slate-300/90">
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Foundation design: shallow/deep, drilled shafts, pile embedment, and uplift/adfreeze.</li>
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Slope stability, seepage, and ground improvement options analyses.</li>
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Pavement systems: design, rehabilitation strategies, and life-cycle optimization.</li>
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Instrumentation & lab programs: thermal conductivity, adfreeze, and performance testing.</li>
+          </ul>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Quick Facts</h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="flex items-center justify-between"><span>Headquarters</span><span>San Diego, CA</span></div>
+            <div class="flex items-center justify-between"><span>Practice Areas</span><span>Geo • Pavement • Data</span></div>
+            <div class="flex items-center justify-between"><span>Delivery</span><span>Design • PM/CM • Advisory</span></div>
+            <div class="flex items-center justify-between"><span>Licensure</span><span>PE (multi-state) <!-- EDIT ME --></span></div>
+          </div>
+          <a href="#contact" class="mt-4 inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
+            Work with us <i data-feather="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Services ======= -->
+  <section id="services" class="section py-20 bg-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10">Services</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card -->
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-xl mb-2">Geotechnical Design</h3>
+          <p class="text-slate-300/90 text-sm">Foundations (shallow & deep), retaining systems (MSE, soil nail, anchored), ground improvement concepts, excavation support, and seismic response.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
+            <li>Piles & drilled shafts; uplift/adfreeze</li>
+            <li>Slope stability & seepage</li>
+            <li>Earth structures & dams/levees (select services)</li>
+          </ul>
+        </div>
+
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-xl mb-2">Pavements & Materials</h3>
+          <p class="text-slate-300/90 text-sm">AASHTO & mechanistic-empirical designs, rehabilitation, and materials characterization for highways, industrial yards, and solar/BESS access.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
+            <li>Forensic & rehab strategies</li>
+            <li>Spec development & QC/QA</li>
+            <li>Life-cycle and constructability reviews</li>
+          </ul>
+        </div>
+
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-xl mb-2">Testing & Instrumentation</h3>
+          <p class="text-slate-300/90 text-sm">Field & lab programs, thermal conductivity, adfreeze testing, sensor plans for performance verification, and data pipelines.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
+            <li>Sensor selection & layout</li>
+            <li>Data QA/QC, dashboards</li>
+            <li>Construction monitoring</li>
+          </ul>
+        </div>
+
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-xl mb-2">Analytics & Automation</h3>
+          <p class="text-slate-300/90 text-sm">Python/VBA tooling, Monte Carlo risk screens, parametric studies, and design-assist workflows that turn data into decisions.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
+            <li>Custom calculators & scripts</li>
+            <li>Scenario analysis & visualizations</li>
+            <li>Reporting at scale</li>
+          </ul>
+        </div>
+
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-xl mb-2">Advisory & Peer Review</h3>
+          <p class="text-slate-300/90 text-sm">Independent reviews, constructability, value engineering, and risk registers for owners, EPCs, and lenders.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
+            <li>Scope & assumptions validation</li>
+            <li>Bid alternates / VE memos</li>
+            <li>Owner’s engineer support</li>
+          </ul>
+        </div>
+
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-xl mb-2">Program Support</h3>
+          <p class="text-slate-300/90 text-sm">Portfolio-level standards, templates, and training to keep large programs consistent and compliant.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
+            <li>Playbooks & checklists</li>
+            <li>Submittal workflows</li>
+            <li>Stakeholder coordination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Sectors ======= -->
+  <section id="sectors" class="section py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10">Sectors We Serve</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-slate-300/90">
+        <div class="card rounded-2xl p-6">
+          <div class="text-cyan-300 mb-2"><i data-feather="sun"></i></div>
+          <h3 class="font-semibold">Renewable Energy</h3>
+          <p class="text-sm mt-2">Solar/BESS foundations, mass grading, thermal/soil performance, crane & heavy lift pads.</p>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <div class="text-cyan-300 mb-2"><i data-feather="truck"></i></div>
+          <h3 class="font-semibold">Transportation</h3>
+          <p class="text-sm mt-2">Highways, interchanges, retaining systems, and slope stabilization for DOT programs.</p>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <div class="text-cyan-300 mb-2"><i data-feather="droplet"></i></div>
+          <h3 class="font-semibold">Water & Flood</h3>
+          <p class="text-sm mt-2">Dams, levees, basins, seepage, and erosion control; instrumentation for performance.</p>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <div class="text-cyan-300 mb-2"><i data-feather="package"></i></div>
+          <h3 class="font-semibold">Industrial & Data</h3>
+          <p class="text-sm mt-2">Logistics & advanced manufacturing sites, settlement & floor performance strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Capabilities (tools & software) ======= -->
+  <section id="capabilities" class="section py-20 bg-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10">Technical Capabilities</h2>
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-lg">Analysis Suites</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300/90 list-disc pl-5">
+            <li>Rocscience (Slide, RS2/RS3, Settle, RSPile)</li>
+            <li>GeoStudio (SLOPE/W, SEEP/W, Sigma, Temp/W)</li>
+            <li>PLAXIS • L-Pile • DeepEX • MSEW</li>
+          </ul>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-lg">Design & Standards</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300/90 list-disc pl-5">
+            <li>AASHTO • FHWA • USACE (select) • NAVFAC (select)</li>
+            <li>ASCE/IBC seismic considerations</li>
+            <li>DOT specifications and submittals</li>
+          </ul>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-lg">Data, Code & Automation</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300/90 list-disc pl-5">
+            <li>Python/VBA scripts and calculators</li>
+            <li>Parametric/Monte Carlo studies</li>
+            <li>Reporting pipelines & dashboards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Projects (case highlights) ======= -->
+  <section id="projects" class="section py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-end justify-between gap-6 mb-8">
+        <h2 class="text-3xl font-bold">Project Highlights</h2>
+        <a href="#contact" class="text-cyan-300 hover:text-cyan-200 text-sm">Discuss your project →</a>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Case Study Card — EDIT ME -->
+        <article class="card rounded-2xl overflow-hidden">
+          <div class="aspect-[16/9] bg-white/5"></div>
+          <div class="p-6">
+            <div class="text-xs uppercase tracking-wider text-slate-400">Energy • Foundations</div>
+            <h3 class="font-semibold text-xl mt-1">Utility-Scale Solar & BESS — Foundation Optimization</h3>
+            <p class="text-slate-300/90 mt-2 text-sm">
+              Evaluated pile embedment and adfreeze uplift risk; developed testing and analytics to reduce uncertainty and streamline constructability.
+            </p>
+            <ul class="mt-3 text-sm text-slate-300/80 list-disc pl-5">
+              <li>Parametric design toolkit (Python) to speed submittals</li>
+              <li>Thermal/soil performance instrumentation, data QA/QC</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card rounded-2xl overflow-hidden">
+          <div class="aspect-[16/9] bg-white/5"></div>
+          <div class="p-6">
+            <div class="text-xs uppercase tracking-wider text-slate-400">Transportation • Retaining</div>
+            <h3 class="font-semibold text-xl mt-1">Urban Interchange — Wall Systems & Slope Stability</h3>
+            <p class="text-slate-300/90 mt-2 text-sm">
+              Designed/evaluated MSE, soil nail, anchored, and soldier pile systems across complex geometry with utility constraints and traffic staging.
+            </p>
+            <ul class="mt-3 text-sm text-slate-300/80 list-disc pl-5">
+              <li>Multi-mode stability and deformation checks</li>
+              <li>Constructability sequencing and risk register</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Credentials / Testimonials ======= -->
+  <section id="credentials" class="section py-20 bg-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6">Credentials & Recognition</h2>
+      <!-- Badges (replace with real logos) -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card rounded-2xl p-6 text-center">
+          <div class="text-xs uppercase tracking-wider text-slate-400">Licensure</div>
+          <div class="mt-2 font-semibold">Professional Engineer (PE)</div>
+          <div class="text-slate-400 text-sm mt-1">Multi-state (add states)</div>
+        </div>
+        <div class="card rounded-2xl p-6 text-center">
+          <div class="text-xs uppercase tracking-wider text-slate-400">Leadership</div>
+          <div class="mt-2 font-semibold">ASCE / TRB Committees</div>
+          <div class="text-slate-400 text-sm mt-1">AI & Pavements • Seasonal Effects</div>
+        </div>
+        <div class="card rounded-2xl p-6 text-center">
+          <div class="text-xs uppercase tracking-wider text-slate-400">Awards</div>
+          <div class="mt-2 font-semibold">Emerging Leader</div>
+          <div class="text-slate-400 text-sm mt-1">(Add year/org)</div>
+        </div>
+        <div class="card rounded-2xl p-6 text-center">
+          <div class="text-xs uppercase tracking-wider text-slate-400">Publications</div>
+          <div class="mt-2 font-semibold">Peer-Reviewed & DOT Reports</div>
+          <div class="text-slate-400 text-sm mt-1">Add counts or links</div>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="card rounded-2xl p-6 mt-8">
+        <blockquote class="text-slate-200/90 italic">
+          “Zic0n bridges field reality with analytical rigor. Their design-assist and data workflows cut weeks off our schedule without compromising safety.”
+        </blockquote>
+        <div class="mt-3 text-sm text-slate-400">— Client Name, Title, Organization <!-- EDIT ME --></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Contact / RFP ======= -->
+  <section id="contact" class="section py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl font-bold">Let’s talk about your project</h2>
+          <p class="text-slate-300/90 mt-2">
+            Share a brief scope or RFP details and we’ll follow up with proposed next steps.
+            For faster review, include site location, primary constraints, and schedule targets.
+          </p>
+
+          <div class="mt-6 space-y-3 text-slate-300/90">
+            <div class="flex items-center gap-3"><i data-feather="map-pin" class="text-cyan-400"></i> San Diego, CA (serving West & Mountain regions)</div>
+            <div class="flex items-center gap-3"><i data-feather="mail" class="text-cyan-400"></i> <a class="underline hover:no-underline" href="mailto:info@zic0n.com">info@zic0n.com</a></div>
+            <div class="flex items-center gap-3"><i data-feather="phone" class="text-cyan-400"></i> <!-- EDIT ME: phone number --></div>
+          </div>
+        </div>
+
+        <!-- Simple static form (works with Formspree or similar) -->
+        <form class="card rounded-2xl p-6 space-y-4" action="https://formspree.io/f/your-id" method="POST">
+          <!-- EDIT ME: swap action with your Formspree endpoint -->
+          <div>
+            <label class="text-sm block mb-1">Name</label>
+            <input required name="name" class="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Your name" />
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm block mb-1">Email</label>
+              <input required name="email" type="email" class="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="you@company.com" />
+            </div>
+            <div>
+              <label class="text-sm block mb-1">Company</label>
+              <input name="company" class="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2" placeholder="Company name" />
+            </div>
+          </div>
+          <div>
+            <label class="text-sm block mb-1">Project / RFP Summary</label>
+            <textarea required name="message" rows="5" class="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Location, constraints, schedule, deliverables..."></textarea>
+          </div>
+          <button class="w-full py-3 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition">Send</button>
+          <p class="text-xs text-slate-500">By submitting this form you agree to our response via email. We don’t share your data.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer class="border-t border-white/10 py-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 rounded-lg bg-cyan-400/20 grid place-items-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12L12 3l9 9-9 9-9-9Z" stroke="#22d3ee" stroke-width="1.5"/><path d="M12 7v10M7 12h10" stroke="#60a5fa" stroke-width="1.5"/></svg>
+            </div>
+            <span class="font-semibold">Zic0n Engineering</span>
+          </div>
+          <p class="text-slate-400 text-sm mt-2">© <span id="year"></span> Zic0n Engineering. All rights reserved.</p>
+        </div>
+
+        <div class="text-slate-400 text-sm grid sm:grid-cols-2 gap-x-10 gap-y-2">
+          <div>San Diego, CA</div>
+          <div>info@zic0n.com</div>
+          <div><!-- Add license # or GE/PE states --></div>
+          <div><!-- Add small print, e.g., “Select USACE/NAVFAC services” --></div>
+        </div>
+
+        <div class="flex items-center gap-4 text-slate-400">
+          <a href="#" class="hover:text-white" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+          <a href="#" class="hover:text-white" aria-label="GitHub"><i data-feather="github"></i></a>
+          <a href="#" class="hover:text-white" aria-label="Email"><i data-feather="mail"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======= Small JS ======= -->
+  <script>
+    feather.replace();
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+
+  <!-- ======= JSON-LD (optional; edit organization details) ======= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zic0n Engineering",
+    "url": "https://zic0n.com",
+    "logo": "https://zic0n.com/logo.png",
+    "email": "info@zic0n.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "San Diego", "addressRegion": "CA", "addressCountry": "US" },
+    "sameAs": ["https://www.linkedin.com/","https://github.com/"]
+  }
+  </script>
 </body>
 </html>
