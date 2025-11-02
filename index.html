@@ -4,8 +4,8 @@
   <!-- ======= Meta ======= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zic0n Engineering — Geotechnical • Pavement • Data-Driven Design</title>
-  <meta name="description" content="Zic0n Engineering delivers advanced geotechnical, pavement, and data-driven solutions for energy, transportation, water, and heavy civil projects." />
+  <title>Zic0n Engineering — Geotechnical • Transportation • Pavements • Materials • Data</title>
+  <meta name="description" content="Zic0n Engineering is a partner-led civil consultancy delivering geotechnical, transportation/roadway, pavements & materials, and data-enabled solutions for energy, DOT, water/flood, and industrial owners across the U.S." />
   <meta name="theme-color" content="#0b1220" />
 
   <!-- ======= Tailwind (CDN) ======= -->
@@ -17,8 +17,8 @@
   <script src="https://unpkg.com/feather-icons"></script>
 
   <!-- ======= Open Graph ======= -->
-  <meta property="og:title" content="Zic0n Engineering — Geotechnical • Pavement • Data-Driven Design" />
-  <meta property="og:description" content="Advanced geotechnical, pavement, and data-driven solutions for energy, transportation, water, and heavy civil projects." />
+  <meta property="og:title" content="Zic0n Engineering — Geotechnical • Transportation • Pavements • Materials • Data" />
+  <meta property="og:description" content="Partner-led civil engineering: geotechnical & geo-structural, roadway & drainage, pavements & asphalt materials, instrumentation, and data/automation." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Zic0n+Engineering" />
   <meta property="og:url" content="https://zic0n.com" />
@@ -31,6 +31,7 @@
       --muted: #94a3b8;
       --brand: #22d3ee; /* cyan-400 */
       --accent: #60a5fa; /* blue-400 */
+      --lime: #a3e635;
     }
     html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: #e5e7eb; }
     .glass { background: linear-gradient(140deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.08); }
@@ -42,6 +43,7 @@
     .kbd { font-size: .75rem; padding: .15rem .35rem; border: 1px solid rgba(255,255,255,0.15); border-radius: .4rem; background: rgba(255,255,255,0.04); }
     details[open] summary .chev { transform: rotate(180deg); }
     .prose-list li { margin-bottom: .4rem; }
+    .badge { border:1px solid rgba(255,255,255,0.12); border-radius:.5rem; padding:.25rem .5rem; font-size:.75rem; color:#cbd5e1 }
   </style>
 </head>
 
@@ -91,15 +93,15 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p class="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-cyan-300/80 tag rounded-full px-3 py-1">
-            <span class="h-2 w-2 rounded-full bg-cyan-400"></span> From soil to systems
+            <span class="h-2 w-2 rounded-full bg-cyan-400"></span> Partner-led civil engineering
           </p>
           <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
-            Data-Driven <span class="gradient-text">Geotechnical & Pavement</span> Engineering
+            Resilient <span class="gradient-text">Geotechnical, Transportation, Pavements & Materials</span>—powered by Data
           </h1>
-          <p class="mt-5 text-slate-300/90 max-w-xl">
-            Zic0n partners with owners, EPCs, and designers to deliver resilient, constructible solutions for
-            energy, transportation, water, and heavy civil projects—combining classic geomechanics with
-            modern analytics and automation.
+          <p class="mt-5 text-slate-300/90 max-w-2xl">
+            Zic0n unites geotechnical/geo-structural design with roadway/drainage engineering and asphalt
+            materials expertise. We support owners, EPCs, and DOTs from planning and investigation through
+            detailed design, construction, and performance verification—backed by lab testing and modern analytics.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="#contact" class="px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition shadow-soft">Request a consultation</a>
@@ -109,15 +111,15 @@
           <div class="mt-10 grid grid-cols-3 gap-6 text-center">
             <div class="glass rounded-xl p-4">
               <div class="text-3xl font-extrabold">10+ yrs</div>
-              <div class="text-xs text-slate-400">Geo/Pavement Experience</div>
+              <div class="text-xs text-slate-400">Geotech & Pavements</div>
             </div>
             <div class="glass rounded-xl p-4">
-              <div class="text-3xl font-extrabold">80+</div>
-              <div class="text-xs text-slate-400">Advanced Analyses</div>
+              <div class="text-3xl font-extrabold">DOT & Caltrans</div>
+              <div class="text-xs text-slate-400">Roadway & Drainage</div>
             </div>
             <div class="glass rounded-xl p-4">
-              <div class="text-3xl font-extrabold">50+</div>
-              <div class="text-xs text-slate-400">Retaining Systems</div>
+              <div class="text-3xl font-extrabold">Lab • LCA</div>
+              <div class="text-xs text-slate-400">Asphalt Materials</div>
             </div>
           </div>
         </div>
@@ -125,24 +127,27 @@
         <div class="relative">
           <div class="card rounded-2xl p-6 shadow-soft">
             <div class="aspect-video rounded-xl bg-gradient-to-br from-cyan-400/10 to-blue-400/10 border border-white/10 grid place-items-center">
-              <!-- Decorative schematic -->
-              <svg viewBox="0 0 600 300" class="w-[92%] h-[92%]">
+              <!-- Decorative schematic (geo + roadway) -->
+              <svg viewBox="0 0 640 320" class="w-[92%] h-[92%]">
                 <defs>
                   <linearGradient id="g1" x1="0" x2="1">
                     <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/>
                     <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.9"/>
                   </linearGradient>
                 </defs>
-                <rect x="20" y="30" width="560" height="240" rx="14" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.4"/>
-                <path d="M50 180 Q 150 120 250 160 T 550 150" fill="none" stroke="#22d3ee" stroke-width="2"/>
-                <path d="M50 210 Q 150 150 250 190 T 550 185" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.8"/>
-                <circle cx="160" cy="150" r="4" fill="#22d3ee"/><circle cx="320" cy="172" r="4" fill="#60a5fa"/>
-                <text x="50" y="60" fill="#cbd5e1" font-size="12">Foundation Response</text>
-                <text x="50" y="80" fill="#cbd5e1" font-size="12">Thermal/Adfreeze • Settlement • Stability</text>
+                <rect x="20" y="20" width="600" height="280" rx="14" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.4"/>
+                <!-- roadway -->
+                <path d="M40 160 L600 140" stroke="#60a5fa" stroke-width="3" />
+                <path d="M80 160 L120 160 M160 156 L200 156 M240 152 L280 152 M320 148 L360 148 M400 144 L440 144 M480 142 L520 142" stroke="#e5e7eb" stroke-width="2" />
+                <!-- subsurface -->
+                <path d="M40 210 C140 170, 260 190, 360 200 S560 230 600 220" fill="none" stroke="#22d3ee" stroke-width="2"/>
+                <path d="M60 240 C160 210, 260 235, 380 245 S540 270 600 260" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+                <text x="40" y="60" fill="#cbd5e1" font-size="12">Roadway • Drainage • Guardrail</text>
+                <text x="40" y="80" fill="#cbd5e1" font-size="12">Foundations • Walls • Slope Stability • Pavements • Materials</text>
               </svg>
             </div>
             <p class="text-slate-300/90 mt-4 text-sm">
-              We translate subsurface uncertainty into clear decisions—fusing field data, lab testing, and physics-based models with practical construction know-how.
+              We translate subsurface and systems uncertainty into clear decisions—merging field & lab data, physics-based models, DOT standards, and constructability.
             </p>
           </div>
         </div>
@@ -157,24 +162,28 @@
         <div class="md:col-span-2">
           <h2 class="text-3xl font-bold mb-3">About Zic0n</h2>
           <p class="text-slate-300/90 leading-relaxed">
-            Zic0n is an applied engineering practice focused on geotechnical, pavement, and materials
-            engineering—complemented by modern analytics and automation. We support owners and
-            design teams from early planning through construction and performance verification.
+            Zic0n is an applied civil engineering practice co-founded by two Ph.D. P.E.s—one rooted in
+            geotechnical/geo-structural design and instrumentation, the other in transportation/roadway design
+            and asphalt materials. Together, we provide end-to-end support: site investigations, roadway and
+            drainage plans, foundation and wall systems, pavement design and rehab, lab testing, and analytics.
           </p>
           <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-slate-300/90">
-            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Foundation design: shallow/deep, drilled shafts, pile embedment, uplift/adfreeze.</li>
-            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Slope stability, seepage, and ground improvement option analyses.</li>
-            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Pavement systems: design, rehabilitation strategies, and life-cycle optimization.</li>
-            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Instrumentation & lab programs: thermal conductivity, adfreeze, and performance testing.</li>
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Foundations (shallow/deep, drilled shafts, piles), slope stability, seepage, ground improvement, dams/levees (select services).</li>
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Roadway geometrics, alignments, guardrail (MGS), drainage inlets/culverts, signing & striping, quantities & cost estimates (DOT/Caltrans).</li>
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Pavements (AASHTO & M-E), asphalt binder/mixture testing, QA/QC, forensic & rehab strategies, life-cycle assessment (LCA).</li>
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Instrumentation programs (thermal/adfreeze, settlement), data QA/QC, parametric & Monte Carlo analyses, reporting pipelines.</li>
           </ul>
         </div>
         <div class="card rounded-2xl p-6">
           <h3 class="font-semibold text-lg mb-2">Quick Facts</h3>
           <div class="space-y-2 text-slate-300">
             <div class="flex items-center justify-between"><span>Headquarters</span><span>San Diego, CA</span></div>
-            <div class="flex items-center justify-between"><span>Practice Areas</span><span>Geo • Pavement • Data</span></div>
-            <div class="flex items-center justify-between"><span>Delivery</span><span>Design • PM/CM • Advisory</span></div>
+            <div class="flex items-center justify-between"><span>Practice Areas</span><span>Geo • Transportation • Pavements • Materials • Data</span></div>
+            <div class="flex items-center justify-between"><span>Delivery</span><span>Planning • Design • PM/CM • Advisory</span></div>
             <div class="flex items-center justify-between"><span>Licensure</span><span>PE (multi-state)</span></div>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="badge">AASHTO</span><span class="badge">Caltrans</span><span class="badge">USACE (select)</span><span class="badge">NAVFAC (select)</span>
           </div>
           <a href="#contact" class="mt-4 inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
             Work with us <i data-feather="arrow-right"></i>
@@ -184,63 +193,77 @@
     </div>
   </section>
 
-  <!-- ======= Services ======= -->
+  <!-- ======= Services (balanced 50/50) ======= -->
   <section id="services" class="section py-20 bg-white/5">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-10">Services</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Geotechnical / Geo-Structural -->
         <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-xl mb-2">Geotechnical Design</h3>
-          <p class="text-slate-300/90 text-sm">Foundations (shallow & deep), retaining systems (MSE, soil nail, anchored), ground improvement concepts, excavation support, and seismic response.</p>
+          <h3 class="font-semibold text-xl mb-2">Geotechnical & Geo-Structural</h3>
+          <p class="text-slate-300/90 text-sm">Subsurface investigations and design for foundations, earth retention, and earth structures.</p>
           <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
-            <li>Piles & drilled shafts; uplift/adfreeze</li>
-            <li>Slope stability & seepage</li>
-            <li>Earth structures & select dam/levee services</li>
+            <li>Shallow & deep foundations, drilled shafts, pile embedment & uplift/adfreeze</li>
+            <li>Retaining systems: MSE, soil nail, anchored, soldier pile</li>
+            <li>Slope stability, seepage, ground improvement options</li>
+            <li>Dams/levees (select assessments), basins, erosion & infiltration</li>
           </ul>
         </div>
+
+        <!-- Transportation / Roadway -->
         <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-xl mb-2">Pavements & Materials</h3>
-          <p class="text-slate-300/90 text-sm">AASHTO & mechanistic-empirical designs, rehabilitation, and materials characterization for highways, industrial yards, and solar/BESS access.</p>
+          <h3 class="font-semibold text-xl mb-2">Transportation & Roadway Design</h3>
+          <p class="text-slate-300/90 text-sm">DOT/Caltrans-aligned roadway and drainage plans with constructability and safety in focus.</p>
           <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
-            <li>Forensic & rehab strategies</li>
-            <li>Spec development & QC/QA</li>
-            <li>Life-cycle and constructability reviews</li>
+            <li>Geometrics & alignments, staging, signing & striping</li>
+            <li>Guardrail (MGS) & roadside safety details</li>
+            <li>Drainage inlets/culverts, water handling, erosion control</li>
+            <li>Quantities, estimates, special provisions, and bid packages</li>
           </ul>
         </div>
+
+        <!-- Pavements & Materials -->
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold text-xl mb-2">Pavements & Asphalt Materials</h3>
+          <p class="text-slate-300/90 text-sm">Mechanistic-empirical design, rehab strategies, and lab testing programs for durable, cost-effective sections.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
+            <li>Binder & mixture testing; lab QA/QC & protocols</li>
+            <li>Forensic assessments & rehabilitation design</li>
+            <li>Industrial yards, highways, and solar/BESS access roads</li>
+            <li>Life-Cycle Assessment (OpenLCA) and sustainability screens</li>
+          </ul>
+        </div>
+
+        <!-- Testing & Instrumentation -->
         <div class="card rounded-2xl p-6">
           <h3 class="font-semibold text-xl mb-2">Testing & Instrumentation</h3>
-          <p class="text-slate-300/90 text-sm">Field & lab programs, thermal conductivity, adfreeze testing, sensor plans for performance verification, and data pipelines.</p>
+          <p class="text-slate-300/90 text-sm">Field and lab programs plus sensors for thermal, settlement, and performance verification.</p>
           <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
-            <li>Sensor selection & layout</li>
-            <li>Data QA/QC, dashboards</li>
-            <li>Construction monitoring</li>
+            <li>Thermal conductivity & adfreeze programs</li>
+            <li>Sensor selection, layout, and data QA/QC</li>
+            <li>Construction monitoring, CQA/CQC, dashboards</li>
           </ul>
         </div>
+
+        <!-- Analytics & Automation -->
         <div class="card rounded-2xl p-6">
           <h3 class="font-semibold text-xl mb-2">Analytics & Automation</h3>
-          <p class="text-slate-300/90 text-sm">Python/VBA tooling, Monte Carlo risk screens, parametric studies, and design-assist workflows that turn data into decisions.</p>
+          <p class="text-slate-300/90 text-sm">Tooling and workflows that turn data into decisions and accelerate delivery.</p>
           <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
-            <li>Custom calculators & scripts</li>
-            <li>Scenario analysis & visualizations</li>
-            <li>Reporting at scale</li>
+            <li>Python/VBA/MATLAB calculators, templates, and scripts</li>
+            <li>Parametric & Monte Carlo risk studies</li>
+            <li>Portfolio-level reporting pipelines and standards</li>
           </ul>
         </div>
+
+        <!-- Advisory & PMO -->
         <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-xl mb-2">Advisory & Peer Review</h3>
-          <p class="text-slate-300/90 text-sm">Independent reviews, constructability, value engineering, and risk registers for owners, EPCs, and lenders.</p>
+          <h3 class="font-semibold text-xl mb-2">Advisory, Peer Review & PMO</h3>
+          <p class="text-slate-300/90 text-sm">Independent reviews, VE/constructability, and program controls for owners and EPCs.</p>
           <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
-            <li>Scope & assumptions validation</li>
-            <li>Bid alternates / VE memos</li>
-            <li>Owner’s engineer support</li>
-          </ul>
-        </div>
-        <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-xl mb-2">Program Support</h3>
-          <p class="text-slate-300/90 text-sm">Portfolio-level standards, templates, and training to keep large programs consistent and compliant.</p>
-          <ul class="mt-4 space-y-2 text-sm text-slate-300/80 list-disc pl-5">
-            <li>Playbooks & checklists</li>
-            <li>Submittal workflows</li>
-            <li>Stakeholder coordination</li>
+            <li>Scope validation, alternate concepts, and risk registers</li>
+            <li>Owner’s engineer & coordination with agencies</li>
+            <li>Playbooks, checklists, and submittal workflows</li>
           </ul>
         </div>
       </div>
@@ -255,61 +278,61 @@
         <div class="card rounded-2xl p-6">
           <div class="text-cyan-300 mb-2"><i data-feather="sun"></i></div>
           <h3 class="font-semibold">Renewable Energy</h3>
-          <p class="text-sm mt-2">Solar/BESS foundations, mass grading, thermal/soil performance, crane & heavy lift pads.</p>
+          <p class="text-sm mt-2">Solar/BESS foundations, mass grading, thermal/adfreeze, crane & heavy-lift pads, access roads, drainage.</p>
         </div>
         <div class="card rounded-2xl p-6">
           <div class="text-cyan-300 mb-2"><i data-feather="truck"></i></div>
-          <h3 class="font-semibold">Transportation</h3>
-          <p class="text-sm mt-2">Highways, interchanges, retaining systems, and slope stabilization for DOT programs.</p>
+          <h3 class="font-semibold">Transportation (DOT/Caltrans)</h3>
+          <p class="text-sm mt-2">Roadway geometrics, guardrail, drainage, retaining systems, staging, quantities/estimates, specs.</p>
         </div>
         <div class="card rounded-2xl p-6">
           <div class="text-cyan-300 mb-2"><i data-feather="droplet"></i></div>
           <h3 class="font-semibold">Water & Flood</h3>
-          <p class="text-sm mt-2">Dams, levees, basins, seepage, and erosion control; instrumentation for performance.</p>
+          <p class="text-sm mt-2">Dams/levees (select), basins, seepage, erosion control; performance instrumentation and monitoring.</p>
         </div>
         <div class="card rounded-2xl p-6">
           <div class="text-cyan-300 mb-2"><i data-feather="package"></i></div>
           <h3 class="font-semibold">Industrial & Data</h3>
-          <p class="text-sm mt-2">Logistics & advanced manufacturing sites, settlement & floor performance strategies.</p>
+          <p class="text-sm mt-2">Advanced manufacturing & logistics sites; settlement and floor performance strategies; pavement rehab.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======= Capabilities ======= -->
+  <!-- ======= Capabilities (software & standards) ======= -->
   <section id="capabilities" class="section py-20 bg-white/5">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-10">Technical Capabilities</h2>
       <div class="grid lg:grid-cols-3 gap-6">
         <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-lg">Analysis Suites</h3>
+          <h3 class="font-semibold text-lg">Analysis & Design Suites</h3>
           <ul class="mt-3 space-y-2 text-sm text-slate-300/90 list-disc pl-5">
             <li>Rocscience (Slide, RS2/RS3, Settle, RocFall, RSPile)</li>
-            <li>GeoStudio (SLOPE/W, SEEP/W, Sigma, Temp/W)</li>
+            <li>GeoStudio (SLOPE/W, SEEP/W, Sigma/W, Temp/W)</li>
             <li>PLAXIS • L-Pile • DeepEX • MSEW • AASHTOWare</li>
           </ul>
         </div>
         <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-lg">Design & Standards</h3>
+          <h3 class="font-semibold text-lg">Transportation & CAD</h3>
           <ul class="mt-3 space-y-2 text-sm text-slate-300/90 list-disc pl-5">
-            <li>AASHTO • FHWA • USACE (select) • NAVFAC (select)</li>
-            <li>ASCE/IBC seismic considerations • DOT specs/submittals</li>
-            <li>Owner’s engineer & peer review</li>
+            <li>AutoCAD Civil 3D • MicroStation • AutoTURN</li>
+            <li>Caltrans standards • DOT spec development</li>
+            <li>Signing & striping, guardrail (MGS), drainage design</li>
           </ul>
         </div>
         <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-lg">Data, Code & Automation</h3>
+          <h3 class="font-semibold text-lg">Data, Materials & QA</h3>
           <ul class="mt-3 space-y-2 text-sm text-slate-300/90 list-disc pl-5">
-            <li>Python, VBA, MATLAB calculators</li>
-            <li>Parametric / Monte Carlo studies</li>
-            <li>Reporting pipelines & dashboards</li>
+            <li>Python, VBA, MATLAB tooling & dashboards</li>
+            <li>Asphalt binder/mixture testing • Lab QA/QC</li>
+            <li>OpenLCA • JMP statistical software</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======= Projects ======= -->
+  <!-- ======= Projects (balanced) ======= -->
   <section id="projects" class="section py-20">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex items-end justify-between gap-6 mb-8">
@@ -318,33 +341,34 @@
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <!-- Case Study Card -->
+        <!-- Energy & Geo -->
         <article class="card rounded-2xl overflow-hidden">
           <div class="aspect-[16/9] bg-white/5"></div>
           <div class="p-6">
-            <div class="text-xs uppercase tracking-wider text-slate-400">Energy • Foundations</div>
-            <h3 class="font-semibold text-xl mt-1">Utility-Scale Solar & BESS — Foundation Optimization</h3>
+            <div class="text-xs uppercase tracking-wider text-slate-400">Energy • Foundations • Instrumentation</div>
+            <h3 class="font-semibold text-xl mt-1">Utility-Scale Solar & BESS — Foundation Optimization & Thermal Performance</h3>
             <p class="text-slate-300/90 mt-2 text-sm">
-              Evaluated pile embedment and adfreeze uplift risk; developed testing and analytics to reduce uncertainty and streamline constructability.
+              Embedment and uplift/adfreeze analyses, testing plans, and instrumentation to quantify thermal/soil effects and reduce uncertainty; Python toolkits accelerated submittals.
             </p>
             <ul class="mt-3 text-sm text-slate-300/80 list-disc pl-5">
-              <li>Parametric design toolkit (Python) to speed submittals</li>
-              <li>Thermal/soil performance instrumentation, data QA/QC</li>
+              <li>Parametric design & Monte Carlo screening</li>
+              <li>Construction QA/QC and data dashboards</li>
             </ul>
           </div>
         </article>
 
+        <!-- DOT Roadway -->
         <article class="card rounded-2xl overflow-hidden">
           <div class="aspect-[16/9] bg-white/5"></div>
           <div class="p-6">
-            <div class="text-xs uppercase tracking-wider text-slate-400">Transportation • Retaining</div>
-            <h3 class="font-semibold text-xl mt-1">Urban Interchange — Wall Systems & Slope Stability</h3>
+            <div class="text-xs uppercase tracking-wider text-slate-400">DOT/Caltrans • Roadway • Drainage</div>
+            <h3 class="font-semibold text-xl mt-1">Interchange & Corridor Tasks — Guardrail, Drainage, and Plan Production</h3>
             <p class="text-slate-300/90 mt-2 text-sm">
-              Designed/evaluated MSE, soil nail, anchored, and soldier pile systems across complex geometry with utility constraints and traffic staging.
+              Plan sheets for MGS guardrail, drainage inlets/culverts, signing/striping, quantities and cost estimates, emergency response scopes, and project controls for delivery.
             </p>
             <ul class="mt-3 text-sm text-slate-300/80 list-disc pl-5">
-              <li>Multi-mode stability and deformation checks</li>
-              <li>Constructability sequencing and risk register</li>
+              <li>Caltrans standards & Minor B project management</li>
+              <li>Staging, constructability, and bid documentation</li>
             </ul>
           </div>
         </article>
@@ -352,7 +376,7 @@
     </div>
   </section>
 
-  <!-- ======= Team & CVs ======= -->
+  <!-- ======= Team & CVs (two equal profiles) ======= -->
   <section id="team" class="section py-24 bg-white/5">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-extrabold mb-10">Team & Detailed CVs</h2>
@@ -362,11 +386,10 @@
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h3 class="text-2xl font-bold">Arash Hosseini, Ph.D., P.E.</h3>
-            <p class="text-slate-300/90 mt-1">Project Engineer • Geotechnical & Pavements • Program Analytics</p>
+            <p class="text-slate-300/90 mt-1">Project Engineer — Geotechnical & Geo-Structural • Pavements • Program Analytics</p>
             <div class="mt-2 text-sm text-slate-400">San Diego, CA • (720) 243-6751 • <a class="underline" href="mailto:arash.mhosseini@yahoo.com">arash.mhosseini@yahoo.com</a></div>
           </div>
           <div class="flex gap-3">
-            <!-- Put the PDF in the same directory or update the path -->
             <a href="./Arash_Hosseini_Resume__25.pdf" class="px-4 py-2 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400">Download CV (PDF)</a>
           </div>
         </div>
@@ -383,94 +406,87 @@
                 <div class="mb-3">
                   <div class="font-semibold">Project Engineer — Business Transformation Group, San Diego, CA (2024–Present)</div>
                   <ul class="list-disc pl-6">
-                    <li>Lead development of adfreeze/frost uplift models, statistical platforms, and automation; advisor for predictive tools (e.g., Virtual Soil Profile).</li>
-                    <li>Design & implement lab programs and instrumentation for renewable projects (adfreeze, thermal conductivity).</li>
-                    <li>Advanced analyses: foundations, pile embedment, drilled shafts, infiltration/erosion, dam/basin performance.</li>
-                    <li>Business development with solar developers; solutions for subsurface uncertainty, expansive soils, adfreeze risks.</li>
+                    <li>Adfreeze/frost uplift models, statistical platforms, and automation; predictive tools (e.g., Virtual Soil Profile).</li>
+                    <li>Lab programs and instrumentation for thermal conductivity/adfreeze; construction monitoring and QA/QC.</li>
+                    <li>Advanced analyses for foundations, drilled shafts, seepage/infiltration, basin/dam performance.</li>
+                    <li>Client development with renewable energy developers; risk mitigation for expansive soils and adfreeze.</li>
                   </ul>
                 </div>
                 <div class="mb-3">
                   <div class="font-semibold">Project Engineer — Terracon, Phoenix, AZ (2021–2024)</div>
                   <ul class="list-disc pl-6">
-                    <li>Design-build support (I-17 & I-10, Phoenix): specs, calcs, reports.</li>
-                    <li>Managed geo & geo-structural projects; retaining walls, foundations, pavements, investigations.</li>
-                    <li>Designed/evaluated 50+ retaining systems (MSE, soil nail, anchored, soldier pile) across multiple states for DOT/private clients.</li>
-                    <li>Performed 80+ advanced analyses: piles, stability, seepage/infiltration, pavement design, FEM/FDM, rockfall, crane support.</li>
-                    <li>SME for crane foundations and challenges with expansive soils and adfreeze; oversaw budgets/schedules and client engagement.</li>
+                    <li>Design-build support (I-17/I-10) for specifications, calculations, and reports.</li>
+                    <li>Managed geo & geo-structural projects: retaining walls, foundations, pavements, and investigations.</li>
+                    <li>Designed/evaluated 50+ retaining systems (MSE, soil nail, anchored, soldier pile).</li>
+                    <li>Performed 80+ advanced analyses including stability, seepage, FEM/FDM, rockfall, uplift/adfreeze.</li>
+                    <li>SME for crane pads and expansive soil challenges; budget/schedule oversight and client engagement.</li>
                   </ul>
                 </div>
                 <div class="mb-3">
                   <div class="font-semibold">Senior Staff Engineer — Terracon, Phoenix, AZ (2020–2021)</div>
                   <ul class="list-disc pl-6">
-                    <li>Authored proposals & GERs for 60+ solar/site/geo-structural projects across transportation, power, industrial, healthcare.</li>
-                    <li>Coordinated field programs, lab testing, analyses, and client communications.</li>
+                    <li>Proposals & GERs for 60+ projects across transportation, power, industrial, and healthcare sectors.</li>
                   </ul>
                 </div>
                 <div class="mb-3">
                   <div class="font-semibold">TA/RA — Temple University & Colorado School of Mines (2015–2020)</div>
                   <ul class="list-disc pl-6">
-                    <li>Taught Surveying, Statistics, Civil Materials; assisted Construction Mgmt, Steel, Concrete Design.</li>
-                    <li>Research: geotechnical/pavement testing, numerical modeling, databases; 3 WisDOT-funded studies; proposals, reports, conferences; student mentoring.</li>
+                    <li>Taught Surveying, Statistics, Civil Materials; assisted Construction Mgmt, Steel, and Concrete Design.</li>
+                    <li>Research: geotechnical/pavement testing, numerical modeling, databases; WisDOT-funded projects and reports.</li>
                   </ul>
                 </div>
                 <div class="mb-3">
                   <div class="font-semibold">Geotechnical Staff Engineer — IPK (2014–2015)</div>
                   <ul class="list-disc pl-6">
-                    <li>PM/designer for >60-ft deep excavations with soil nailing/anchors; risk assessments; design documentation; QC/QA of installation and testing.</li>
+                    <li>PM/designer for >60-ft deep excavations (soil nailing/anchors); QC/QA of installation and testing.</li>
                   </ul>
                 </div>
                 <div class="mb-3">
                   <div class="font-semibold">Geotechnical Staff Engineer / Intern — Towse-e Paydar (2012–2014)</div>
                   <ul class="list-disc pl-6">
-                    <li>Analyses for large commercial/industrial projects; settlement and stabilization; slope stability; deep excavation designs.</li>
-                    <li>Municipal slope stabilization study: analytical software, selection guides, report co-authoring; field/lab testing and proposal/cost support.</li>
+                    <li>Settlement & stabilization; slope stability; deep excavation designs; field/lab testing programs.</li>
                   </ul>
                 </div>
               </div>
             </details>
 
-            <!-- Publications & Speaking -->
+            <!-- Publications -->
             <details class="card rounded-xl p-5">
               <summary class="cursor-pointer flex items-center justify-between">
                 <span class="font-semibold">Publications & Presentations</span>
                 <i class="chev" data-feather="chevron-down"></i>
               </summary>
               <p class="mt-4 text-sm text-slate-300/90">
-                Authored <strong>13 journal papers</strong>, <strong>15 conference papers</strong>, and <strong>3 DOT research reports</strong>; presented at 20+ national/international conferences (ASCE T&DI, Geo-Congress, TRB). <!-- Provide links later -->
+                13+ journal papers, 15+ conference papers, and 3 DOT research reports; 20+ national/international presentations (ASCE, TRB, Geo-Congress).
               </p>
             </details>
           </div>
 
           <div class="space-y-5">
-            <!-- Education -->
             <div class="card rounded-xl p-5">
               <h4 class="font-semibold mb-2">Education</h4>
               <ul class="text-sm space-y-2">
                 <li><strong>Ph.D., Pavement Engineering</strong> — Temple University, PA</li>
-                <li><strong>Ph.D., Geotechnical Engineering (transferred)</strong> — Colorado School of Mines, CO</li>
-                <li><strong>M.Sc., Geotechnical Engineering</strong> — Sharif University, Tehran</li>
-                <li><strong>B.S., Civil Engineering</strong> — Razi University, Kermanshah</li>
+                <li><strong>Ph.D., Geotechnical Engineering (transfer)</strong> — Colorado School of Mines, CO</li>
+                <li><strong>M.Sc., Geotechnical Engineering</strong> — Sharif University, Iran</li>
+                <li><strong>B.S., Civil Engineering</strong> — Razi University, Iran</li>
               </ul>
             </div>
-            <!-- Licenses & Affiliations -->
             <div class="card rounded-xl p-5">
               <h4 class="font-semibold mb-2">Licenses • Affiliations • Awards</h4>
               <ul class="text-sm space-y-2">
-                <li>Licensed Professional Engineer — AZ</li>
-                <li>Vice Chair — ASCE T&DI Artificial Intelligence Committee</li>
-                <li>Board — ASCE T&DI Highway Pavement & Highway Construction</li>
-                <li>NSF GRFP Review Panel (Geosciences)</li>
-                <li>TRB AFP50 — Seasonal Climatic Effects</li>
-                <li>Professional Member — ASCE, ASME, EWB-USA, TRB, DFI</li>
+                <li>Professional Engineer — AZ</li>
+                <li>ASCE T&DI: Vice Chair (AI Committee); Board (Highway Pavement & Highway Construction)</li>
+                <li>TRB AFP50 — Seasonal Climatic Effects • NSF GRFP Review Panel</li>
+                <li>ASCE, ASME, EWB-USA, TRB, DFI</li>
                 <li><strong>Terracon Emerging Leader Award (2024)</strong></li>
               </ul>
             </div>
-            <!-- Tools -->
             <div class="card rounded-xl p-5">
               <h4 class="font-semibold mb-2">Software & Tools</h4>
               <ul class="text-sm space-y-1">
-                <li>Civil/Geo/Pavement: Rocscience (Slide/Settle3/RocFall/RS2/RS3/RSPile), GeoStudio (SLOPE/W, SEEP/W, Sigma, Temp/W), PLAXIS, ABAQUS, Snail, L-Pile, DeepEX, MSEW+, Settle3D, AASHTOWare, CAD</li>
-                <li>Data/Code: Python, VBA, MATLAB; Google Colab; AWS for modeling/data pipelines/ML</li>
+                <li>Rocscience (Slide/RS2/RS3/Settle/RocFall/RSPile), GeoStudio (SLOPE/W, SEEP/W, Sigma, Temp/W), PLAXIS, L-Pile, DeepEX, MSEW+</li>
+                <li>Python, VBA, MATLAB; AASHTOWare; CAD; reporting pipelines</li>
               </ul>
             </div>
           </div>
@@ -482,7 +498,7 @@
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h3 class="text-2xl font-bold">Ahmed Abdalla, Ph.D., P.E.</h3>
-            <p class="text-slate-300/90 mt-1">Transportation & Pavement Engineer • Materials & Asphalt Research</p>
+            <p class="text-slate-300/90 mt-1">Transportation & Roadway Engineer — Drainage • Guardrail • Pavements & Asphalt Materials</p>
             <div class="mt-2 text-sm text-slate-400">San Diego / Philadelphia • (267) 679-3093 • <a class="underline" href="mailto:amabdalla90@gmail.com">amabdalla90@gmail.com</a></div>
           </div>
           <div class="flex gap-3">
@@ -502,36 +518,36 @@
                 <div class="mb-3">
                   <div class="font-semibold">Transportation Engineer — TranSystems / Gannett Fleming, Philadelphia, PA (Aug 2024–Present)</div>
                   <ul class="list-disc pl-6">
-                    <li>Contributes to roadway and transit design; project management tasks; multidisciplinary coordination to deliver on scope, schedule, and budget.</li>
+                    <li>Roadway/transit design contributions; project management tasks; multidisciplinary coordination.</li>
                   </ul>
                 </div>
                 <div class="mb-3">
                   <div class="font-semibold">Transportation Engineer — Caltrans, San Diego, CA (Apr 2022–Aug 2024)</div>
                   <ul class="list-disc pl-6">
-                    <li>Managed Minor B and emergency projects; planning, budgeting, and scheduling per Caltrans standards.</li>
-                    <li>Technical oversight for Midwest Guardrail Systems, pavement rehab, drainage inlets/culverts, and barriers.</li>
-                    <li>Stakeholder coordination; contractor RFIs; spec and cost estimate development aligned to Caltrans requirements.</li>
+                    <li>Managed Minor B & emergency projects with planning, budgeting, and scheduling.</li>
+                    <li>Technical work: MGS guardrail, pavement rehab, drainage inlets/culverts, barriers, and quantities/estimates.</li>
+                    <li>RFIs, stakeholder coordination, and spec development aligned with Caltrans standards.</li>
                   </ul>
                 </div>
                 <div class="mb-3">
                   <div class="font-semibold">Asphalt Lab Manager & Researcher — Temple University (Aug 2017–Mar 2022)</div>
                   <ul class="list-disc pl-6">
-                    <li>Managed and performed asphalt binder/mixture tests; EPRI project (~$250k).</li>
-                    <li>Researcher on two WHRP/WisDOT projects focused on in-service performance and QMP impacts.</li>
+                    <li>Binder/mixture testing; EPRI contract (~$250k); two WHRP/WisDOT research projects.</li>
+                    <li>QA/QC oversight, equipment calibration, data management, and method development.</li>
                   </ul>
                 </div>
                 <div class="mb-3">
                   <div class="font-semibold">Roadways Design Engineer — SAUD Consult, Cairo, Egypt (May 2014–Jul 2017)</div>
                   <ul class="list-disc pl-6">
-                    <li>Concept/detailed design, CD sets, quantities, cost estimates, reports, client engagement, field supervision.</li>
-                    <li>Projects spanned highways/roads in rural/urban settings, drainage and safety analyses, helipads, and rough grading.</li>
-                    <li>Key projects: Palm Hills New Cairo (203 ha, 10.2 mi roads); Capital Gardens (51.8 ha, 6.8 mi roads); Al-Ahsa Housing (600 ha, 18.6 mi roads); Dammam University buildings; Mivida (350 ha, 15.2 mi roads).</li>
+                    <li>Concept/detailed roadway design, CDs, quantities, estimates, and reports; field supervision and client engagement.</li>
+                    <li>Projects included highways/urban roads, drainage/safety analyses, helipads, and rough grading.</li>
+                    <li>Representative work: Palm Hills New Cairo (203 ha, 10.2 mi roads), Capital Gardens (51.8 ha, 6.8 mi), Al-Ahsa Housing (600 ha, 18.6 mi), Dammam Univ. buildings, Mivida (350 ha, 15.2 mi).</li>
                   </ul>
                 </div>
                 <div class="mb-3">
-                  <div class="font-semibold">Executive Reserved Officer — Egyptian Army Corps of Engineers, Cairo (Apr 2012–Feb 2014)</div>
+                  <div class="font-semibold">Executive Reserved Officer — Egyptian Army Corps of Engineers (Apr 2012–Feb 2014)</div>
                   <ul class="list-disc pl-6">
-                    <li>Supervised construction of Al-Mosheer Al-Jamsy Tunnel; oversaw contractor repairs and renewals for residential buildings.</li>
+                    <li>Supervised construction of Al-Mosheer Al-Jamsy Tunnel; managed building repair/renewal programs.</li>
                   </ul>
                 </div>
               </div>
@@ -551,7 +567,6 @@
           </div>
 
           <div class="space-y-5">
-            <!-- Education -->
             <div class="card rounded-xl p-5">
               <h4 class="font-semibold mb-2">Education</h4>
               <ul class="text-sm space-y-2">
@@ -560,29 +575,27 @@
                 <li><strong>B.S., Civil Engineering</strong> — Benha Univ., Shoubra Faculty.</li>
               </ul>
             </div>
-            <!-- Licenses & Memberships -->
             <div class="card rounded-xl p-5">
               <h4 class="font-semibold mb-2">Licensure • Memberships</h4>
               <ul class="text-sm space-y-2">
-                <li>P.E. — California (Lic. 95513); P.E. — Pennsylvania (PE095956).</li>
-                <li>ASCE; ASCE T&DI Sustainable Transport Committee; ASME; WTS; Egypt Syndicate of Engineers; Federation of Arab Engineers.</li>
+                <li>P.E. — California (Lic. 95513); P.E. — Pennsylvania (PE095956)</li>
+                <li>ASCE • ASCE T&DI Sustainable Transport Committee • ASME • WTS • Egypt Syndicate of Engineers • Federation of Arab Engineers</li>
+                <li>Languages: Arabic, English</li>
               </ul>
             </div>
-            <!-- Skills -->
             <div class="card rounded-xl p-5">
-              <h4 class="font-semibold mb-2">Skills</h4>
+              <h4 class="font-semibold mb-2">Skills & Tools</h4>
               <ul class="text-sm space-y-1">
-                <li>AutoCAD Civil 3D, MicroStation, AutoTURN.</li>
-                <li>MS Office; JMP statistical software; OpenLCA.</li>
-                <li>Materials & mechanical characterization of asphalt binders/mixtures; HMA & pavement design; binder rheology.</li>
-                <li>Languages: Arabic, English.</li>
+                <li>AutoCAD Civil 3D, MicroStation, AutoTURN</li>
+                <li>MS Office; JMP statistics; OpenLCA</li>
+                <li>Pavement design & rehab; binder/mixture/mechanical testing; roadway drainage & safety</li>
               </ul>
             </div>
           </div>
         </div>
       </article>
 
-      <p class="text-xs text-slate-500 mt-6">Resume details summarized for web from the individuals’ full CVs; PDF downloads include full records.</p>
+      <p class="text-xs text-slate-500 mt-6">This page summarizes each partner’s full CV; PDF downloads contain full records.</p>
     </div>
   </section>
 
@@ -597,14 +610,14 @@
           <div class="text-slate-400 text-sm mt-1">AZ • CA • PA (see CVs)</div>
         </div>
         <div class="card rounded-2xl p-6 text-center">
-          <div class="text-xs uppercase tracking-wider text-slate-400">Leadership</div>
+          <div class="text-xs uppercase tracking-wider text-slate-400">Leadership & Service</div>
           <div class="mt-2 font-semibold">ASCE / TRB Committees</div>
-          <div class="text-slate-400 text-sm mt-1">AI • Pavements • Seasonal Effects</div>
+          <div class="text-slate-400 text-sm mt-1">AI • Pavements • Seasonal Effects • Sustainable Transport</div>
         </div>
         <div class="card rounded-2xl p-6 text-center">
           <div class="text-xs uppercase tracking-wider text-slate-400">Awards</div>
           <div class="mt-2 font-semibold">Emerging Leader (Terracon 2024)</div>
-          <div class="text-slate-400 text-sm mt-1">Plus academic recognitions</div>
+          <div class="text-slate-400 text-sm mt-1">Academic & research recognitions</div>
         </div>
         <div class="card rounded-2xl p-6 text-center">
           <div class="text-xs uppercase tracking-wider text-slate-400">Publications</div>
@@ -615,7 +628,7 @@
 
       <div class="card rounded-2xl p-6 mt-8">
         <blockquote class="text-slate-200/90 italic">
-          “Zic0n bridges field reality with analytical rigor. Their design-assist and data workflows cut weeks off our schedule without compromising safety.”
+          “Zic0n bridges roadway standards, materials science, and geotechnical rigor—delivering constructible solutions without compromising safety.”
         </blockquote>
         <div class="mt-3 text-sm text-slate-400">— Client Name, Title, Organization</div>
       </div>
@@ -630,17 +643,17 @@
           <h2 class="text-3xl font-bold">Let’s talk about your project</h2>
           <p class="text-slate-300/90 mt-2">
             Share a brief scope or RFP details and we’ll follow up with proposed next steps.
-            For faster review, include site location, primary constraints, and schedule targets.
+            Include site/corridor location, primary constraints, and schedule targets for the fastest response.
           </p>
 
           <div class="mt-6 space-y-3 text-slate-300/90">
-            <div class="flex items-center gap-3"><i data-feather="map-pin" class="text-cyan-400"></i> San Diego, CA (serving West & Mountain regions)</div>
+            <div class="flex items-center gap-3"><i data-feather="map-pin" class="text-cyan-400"></i> San Diego, CA • Philadelphia, PA (serving West, Southwest, Mountain, and Mid-Atlantic regions)</div>
             <div class="flex items-center gap-3"><i data-feather="mail" class="text-cyan-400"></i> <a class="underline hover:no-underline" href="mailto:info@zic0n.com">info@zic0n.com</a></div>
-            <div class="flex items-center gap-3"><i data-feather="phone" class="text-cyan-400"></i> <!-- Add phone number(s) if desired --></div>
+            <div class="flex items-center gap-3"><i data-feather="phone" class="text-cyan-400"></i> <!-- Add phone numbers if desired --></div>
           </div>
         </div>
 
-        <!-- Simple static form (works with Formspree or similar) -->
+        <!-- Static form (Formspree-ready) -->
         <form class="card rounded-2xl p-6 space-y-4" action="https://formspree.io/f/your-id" method="POST">
           <div>
             <label class="text-sm block mb-1">Name</label>
@@ -658,7 +671,7 @@
           </div>
           <div>
             <label class="text-sm block mb-1">Project / RFP Summary</label>
-            <textarea required name="message" rows="5" class="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Location, constraints, schedule, deliverables..."></textarea>
+            <textarea required name="message" rows="5" class="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Location/corridor, constraints, schedule, deliverables..."></textarea>
           </div>
           <button class="w-full py-3 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition">Send</button>
           <p class="text-xs text-slate-500">By submitting this form you agree to our response via email. We don’t share your data.</p>
@@ -682,9 +695,9 @@
         </div>
 
         <div class="text-slate-400 text-sm grid sm:grid-cols-2 gap-x-10 gap-y-2">
-          <div>San Diego, CA</div>
+          <div>San Diego, CA • Philadelphia, PA</div>
           <div>info@zic0n.com</div>
-          <div><!-- Add license # or GE/PE states --></div>
+          <div><!-- Add license # or PE states here if desired --></div>
           <div><!-- Small print, e.g., “Select USACE/NAVFAC services” --></div>
         </div>
 
@@ -716,21 +729,24 @@
     "logo": "https://zic0n.com/logo.png",
     "email": "info@zic0n.com",
     "address": { "@type": "PostalAddress", "addressLocality": "San Diego", "addressRegion": "CA", "addressCountry": "US" },
+    "areaServed": ["West", "Southwest", "Mountain", "Mid-Atlantic"],
     "member": [
       {
         "@type": "Person",
         "name": "Arash Hosseini, Ph.D., P.E.",
-        "jobTitle": "Project Engineer",
+        "jobTitle": "Project Engineer — Geotechnical & Geo-Structural",
         "email": "arash.mhosseini@yahoo.com",
         "telephone": "(720) 243-6751",
+        "knowsAbout": ["Foundations","Retaining systems","Slope stability","Seepage","Pavements","Instrumentation","Adfreeze","Thermal conductivity","Parametric analysis","Monte Carlo"],
         "address": { "@type": "PostalAddress", "addressLocality": "San Diego", "addressRegion": "CA", "addressCountry": "US" }
       },
       {
         "@type": "Person",
         "name": "Ahmed Abdalla, Ph.D., P.E.",
-        "jobTitle": "Transportation & Pavement Engineer",
+        "jobTitle": "Transportation & Roadway Engineer — Pavements & Materials",
         "email": "amabdalla90@gmail.com",
         "telephone": "(267) 679-3093",
+        "knowsAbout": ["Roadway design","Guardrail MGS","Drainage inlets/culverts","Signing & striping","Quantities & estimates","Asphalt binder/mixture testing","Pavement rehab","LCA","Civil 3D","MicroStation"],
         "address": { "@type": "PostalAddress", "addressLocality": "Philadelphia", "addressRegion": "PA", "addressCountry": "US" }
       }
     ],
