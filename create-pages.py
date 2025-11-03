@@ -426,14 +426,14 @@ PAGES = {
           </div>
           <div class="card rounded-2xl p-6">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80" alt="Geotechnical drilling rig and soil investigation" class="w-full h-full object-cover opacity-50">
+              <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=800&h=600&fit=crop&q=80" alt="Geotechnical drilling rig and soil investigation" class="w-full h-full object-cover opacity-50">
             </div>
           </div>
         </div>
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="card rounded-2xl p-6 order-2 md:order-1">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1554917418-63c8c87c3184?w=800&h=600&fit=crop&q=80" alt="Highway and roadway infrastructure design" class="w-full h-full object-cover opacity-50">
+              <img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?w=800&h=600&fit=crop&q=80" alt="Highway and roadway infrastructure design" class="w-full h-full object-cover opacity-50">
             </div>
           </div>
           <div class="order-1 md:order-2">
@@ -484,7 +484,7 @@ PAGES = {
           </div>
           <div class="card rounded-2xl p-6">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop&q=80" alt="Pavement engineering and road construction" class="w-full h-full object-cover opacity-50">
+              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80" alt="Pavement engineering and road construction" class="w-full h-full object-cover opacity-50">
             </div>
           </div>
         </div>
@@ -536,7 +536,7 @@ PAGES = {
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=600&fit=crop&q=80" alt="Solar energy infrastructure project" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop&q=80" alt="Solar energy infrastructure project" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -555,7 +555,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop&q=80" alt="Highway infrastructure and roadway rehabilitation" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?w=800&h=600&fit=crop&q=80" alt="Highway infrastructure and roadway rehabilitation" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -574,7 +574,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1611125674701-6f0838280c30?w=800&h=600&fit=crop&q=80" alt="Asphalt paving and pavement construction" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80" alt="Asphalt paving and pavement construction" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -593,7 +593,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1541976590-4d8e4d2b1c53?w=800&h=600&fit=crop&q=80" alt="Deep foundation construction with drilling rigs and piles" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=800&h=600&fit=crop&q=80" alt="Deep foundation construction with drilling rigs and piles" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -631,7 +631,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80" alt="Materials testing and laboratory analysis" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop&q=80" alt="Materials testing and laboratory analysis" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -1118,7 +1118,7 @@ PAGES = {
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop&q=80" alt="Road construction and asphalt paving" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80" alt="Road construction and asphalt paving" class="w-full h-full object-cover">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Pavement Engineering</h3>
@@ -1127,7 +1127,7 @@ PAGES = {
             </div>
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80" alt="Geotechnical drilling and soil investigation" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=800&h=600&fit=crop&q=80" alt="Geotechnical drilling and soil investigation" class="w-full h-full object-cover">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Soil Improvement</h3>
@@ -1160,7 +1160,7 @@ PAGES = {
           <div class="space-y-4">
             <div class="card rounded-xl overflow-hidden hover:border-cyan-400/30 transition">
               <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&h=675&fit=crop&q=80" alt="Pavement engineering and road infrastructure" class="w-full h-full object-cover opacity-50">
+                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200&h=675&fit=crop&q=80" alt="Pavement engineering and road infrastructure" class="w-full h-full object-cover opacity-50">
               </div>
               <div class="p-6">
                 <div class="flex items-start justify-between gap-4">
@@ -1208,7 +1208,7 @@ PAGES = {
 
             <div class="card rounded-xl overflow-hidden hover:border-cyan-400/30 transition">
               <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&h=675&fit=crop&q=80" alt="Geotechnical engineering drilling and foundation work" class="w-full h-full object-cover opacity-50">
+                <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=1200&h=675&fit=crop&q=80" alt="Geotechnical engineering drilling and foundation work" class="w-full h-full object-cover opacity-50">
               </div>
               <div class="p-6">
                 <div class="flex items-start justify-between gap-4">
