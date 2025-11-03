@@ -1,48 +1,34 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+Script to generate all website pages from templates
+"""
+import os
+
+# Common head section
+HEAD = '''<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ======= Meta ======= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zic0n Engineering | Geotechnical, Transportation, Pavements & Materials, Data</title>
-  <meta name="description" content="Zic0n Engineering is a partner-led civil consultancy delivering geotechnical, transportation/roadway, pavements & materials, and data-enabled solutions for energy, DOT, water, and industrial owners across the U.S." />
+  <title>{title} | Zic0n Engineering</title>
+  <meta name="description" content="{description}" />
   <meta name="theme-color" content="#0b1220" />
   <meta name="author" content="Zic0n Engineering" />
   <meta name="keywords" content="geotechnical engineering, transportation design, pavement engineering, civil engineering, roadway design, foundation design, San Diego, Philadelphia" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://zic0n.com" />
-  
-  <!-- ======= Favicon ======= -->
+  <link rel="canonical" href="https://zic0n.com/{page}" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%2322d3ee' d='M3 12L12 3l9 9-9 9-9-9Z'/><path fill='%2360a5fa' d='M12 7v10M7 12h10'/></svg>" />
-
-  <!-- ======= Tailwind (CDN) ======= -->
   <script src="https://cdn.tailwindcss.com" defer></script>
-
-  <!-- ======= Fonts / Icons ======= -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/feather-icons" defer></script>
-
-  <!-- ======= Open Graph ======= -->
-  <meta property="og:title" content="Zic0n Engineering | Geotechnical, Transportation, Pavements & Materials, Data" />
-  <meta property="og:description" content="Partner-led civil engineering: geotechnical & geo-structural, roadway & drainage, pavements & asphalt materials, instrumentation, and data/automation." />
+  <meta property="og:title" content="{title} | Zic0n Engineering" />
+  <meta property="og:description" content="{description}" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://zic0n.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://zic0n.com" />
-
-  <!-- ======= Basic Styles ======= -->
+  <meta property="og:url" content="https://zic0n.com/{page}" />
   <style>
-    :root {
-      --bg: #0b1220;
-      --card: #111a2c;
-      --muted: #94a3b8;
-      --brand: #22d3ee; /* cyan-400 */
-      --accent: #60a5fa; /* blue-400 */
-      --lime: #a3e635;
-    }
+    :root { --bg: #0b1220; --card: #111a2c; --muted: #94a3b8; --brand: #22d3ee; --accent: #60a5fa; --lime: #a3e635; }
     html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: #e5e7eb; }
     .glass { background: linear-gradient(140deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.08); }
     .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); }
@@ -50,23 +36,21 @@
     .tag { border: 1px dashed rgba(255,255,255,0.15); }
     .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
     .section { scroll-margin-top: 90px; }
-    .kbd { font-size: .75rem; padding: .15rem .35rem; border: 1px solid rgba(255,255,255,0.15); border-radius: .4rem; background: rgba(255,255,255,0.04); }
     details[open] summary .chev { transform: rotate(180deg); }
-    .prose-list li { margin-bottom: .4rem; }
     .badge { border:1px solid rgba(255,255,255,0.12); border-radius:.5rem; padding:.25rem .5rem; font-size:.75rem; color:#cbd5e1 }
     .grid-cols-auto { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
     html { scroll-behavior: smooth; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
-    .sr-only.focus\:not-sr-only:focus { position: static; width: auto; height: auto; padding: inherit; margin: inherit; overflow: visible; clip: auto; white-space: normal; }
+    .sr-only.focus\\:not-sr-only:focus { position: static; width: auto; height: auto; padding: inherit; margin: inherit; overflow: visible; clip: auto; white-space: normal; }
   </style>
 </head>
 
 <body class="antialiased">
-  <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-black focus:rounded-lg">Skip to main content</a>
+'''
 
-  <!-- ======= Header / Nav ======= -->
-  <header class="sticky top-0 z-50 bg-[#0b1220]/80 backdrop-blur border-b border-white/10">
+# Common header/nav
+HEADER = '''  <header class="sticky top-0 z-50 bg-[#0b1220]/80 backdrop-blur border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3" aria-label="Zic0n Engineering Home">
         <div class="h-8 w-8 rounded-lg bg-cyan-400/20 grid place-items-center" aria-hidden="true">
@@ -105,80 +89,10 @@
       </nav>
     </div>
   </header>
+'''
 
-  <!-- ======= Hero ======= -->
-  <main id="main-content">
-  <section class="relative section">
-    <div class="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_-20%,rgba(34,211,238,0.20),transparent_60%)]"></div>
-    <div class="max-w-7xl mx-auto px-6 py-20 sm:py-28 relative">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <p class="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-cyan-300/80 tag rounded-full px-3 py-1">
-            <span class="h-2 w-2 rounded-full bg-cyan-400"></span> Partner-led civil engineering
-          </p>
-          <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
-            Resilient <span class="gradient-text">Geotechnical, Transportation, Pavements & Materials</span> powered by Data
-          </h1>
-          <p class="mt-5 text-slate-300/90 max-w-2xl">
-            Zic0n unites geotechnical/geo-structural design with roadway & drainage engineering and asphalt
-            materials expertise. We support owners and designers from planning through detailed design,
-            construction, and performance verification.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="contact.html" class="px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition shadow-soft">Request a consultation</a>
-            <a href="projects.html" class="px-5 py-3 rounded-lg border border-white/15 hover:bg-white/5">View project highlights</a>
-          </div>
-
-          <div class="mt-10 grid grid-cols-3 gap-6 text-center">
-            <div class="glass rounded-xl p-4">
-              <div class="text-3xl font-extrabold">10+ yrs</div>
-              <div class="text-xs text-slate-400">Foundations & Walls</div>
-            </div>
-            <div class="glass rounded-xl p-4">
-              <div class="text-3xl font-extrabold">Roadway</div>
-              <div class="text-xs text-slate-400">Geometrics & Drainage</div>
-            </div>
-            <div class="glass rounded-xl p-4">
-              <div class="text-3xl font-extrabold">Materials</div>
-              <div class="text-xs text-slate-400">Asphalt • LCA • QA/QC</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="relative">
-          <div class="card rounded-2xl p-6 shadow-soft">
-            <div class="aspect-video rounded-xl bg-gradient-to-br from-cyan-400/10 to-blue-400/10 border border-white/10 grid place-items-center">
-              <!-- Decorative schematic (geo + roadway) -->
-              <svg viewBox="0 0 640 320" class="w-[92%] h-[92%]">
-                <defs>
-                  <linearGradient id="g1" x1="0" x2="1">
-                    <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.9"/>
-                    <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.9"/>
-                  </linearGradient>
-                </defs>
-                <rect x="20" y="20" width="600" height="280" rx="14" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.4"/>
-                <!-- roadway -->
-                <path d="M40 160 L600 140" stroke="#60a5fa" stroke-width="3" />
-                <path d="M80 160 L120 160 M160 156 L200 156 M240 152 L280 152 M320 148 L360 148 M400 144 L440 144 M480 142 L520 142" stroke="#e5e7eb" stroke-width="2" />
-                <!-- subsurface -->
-                <path d="M40 210 C140 170, 260 190, 360 200 S560 230 600 220" fill="none" stroke="#22d3ee" stroke-width="2"/>
-                <path d="M60 240 C160 210, 260 235, 380 245 S540 270 600 260" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
-                <text x="40" y="60" fill="#cbd5e1" font-size="12">Roadway • Drainage • Safety</text>
-                <text x="40" y="80" fill="#cbd5e1" font-size="12">Foundations • Walls • Stability • Pavements • Materials</text>
-              </svg>
-            </div>
-            <p class="text-slate-300/90 mt-4 text-sm">
-              We convert uncertainty into decisions by merging field and lab data, physics-based models, state standards, and constructability.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  </main>
-
-  <!-- ======= Footer ======= -->
-  <footer class="border-t border-white/10 py-10">
+# Common footer
+FOOTER = '''  <footer class="border-t border-white/10 py-10">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
@@ -190,14 +104,10 @@
           </div>
           <p class="text-slate-400 text-sm mt-2">© <span id="year"></span> Zic0n Engineering. All rights reserved.</p>
         </div>
-
         <div class="text-slate-400 text-sm grid sm:grid-cols-2 gap-x-10 gap-y-2">
           <div>San Diego, CA • Philadelphia, PA</div>
           <div>info@zic0n.com</div>
-          <div><!-- Add license # or PE states here if desired --></div>
-          <div><!-- Small print, e.g., "Select USACE/NAVFAC services" --></div>
         </div>
-
         <div class="flex items-center gap-4 text-slate-400">
           <a href="https://www.linkedin.com/company/zic0n" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="Zic0n Engineering on LinkedIn"><i data-feather="linkedin" aria-hidden="true"></i></a>
           <a href="https://github.com/Arash-MH68/zic0n.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="Zic0n Engineering on GitHub"><i data-feather="github" aria-hidden="true"></i></a>
@@ -207,7 +117,6 @@
     </div>
   </footer>
 
-  <!-- ======= Small JS ======= -->
   <script>
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', function() {
@@ -218,11 +127,9 @@
       feather.replace();
       initializeApp();
     }
-
     function initializeApp() {
       const yearEl = document.getElementById('year');
       if (yearEl) yearEl.textContent = new Date().getFullYear();
-
       const menuBtn = document.getElementById('menuBtn');
       const mobileMenu = document.getElementById('mobileMenu');
       if (menuBtn && mobileMenu) {
@@ -238,7 +145,6 @@
             feather.replace();
           }
         });
-
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
           link.addEventListener('click', () => {
@@ -253,20 +159,67 @@
       }
     }
   </script>
-
-  <!-- ======= JSON-LD (Organization) ======= -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zic0n Engineering",
-    "url": "https://zic0n.com",
-    "logo": "https://zic0n.com/favicon.svg",
-    "email": "info@zic0n.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "San Diego", "addressRegion": "CA", "addressCountry": "US" },
-    "areaServed": ["West","Southwest","Mountain","Mid-Atlantic","United States"],
-    "description": "Partner-led civil engineering practice providing geotechnical & geo-structural, transportation/roadway & drainage, pavements & asphalt materials, instrumentation, and data/automation services."
-  }
-  </script>
 </body>
 </html>
+'''
+
+# Page content templates
+PAGES = {
+    'about.html': {
+        'title': 'About Us',
+        'description': 'Learn about Zic0n Engineering, a partner-led civil engineering practice providing geotechnical, transportation, pavements & materials expertise.',
+        'content': '''  <main id="main-content">
+  <section class="section py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="md:col-span-2">
+          <h1 class="text-4xl font-bold mb-3">About Zic0n</h1>
+          <p class="text-slate-300/90 leading-relaxed mb-6">
+            Zic0n is an applied civil engineering practice co-founded by two Ph.D. P.E.s. One founder is rooted in
+            geotechnical and geo-structural design and instrumentation, while the other focuses on transportation and roadway design
+            and asphalt materials. Together, we provide end-to-end support including site investigations, roadway and
+            drainage plans, foundation and wall systems, pavement design and rehabilitation, lab testing, and analytics.
+          </p>
+          <ul class="grid sm:grid-cols-2 gap-3 text-slate-300/90">
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Foundations (shallow/deep, drilled shafts, piles), slope stability, seepage, ground improvement, and basin/levee assessments.</li>
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Roadway geometrics & alignments, roadside safety details, drainage inlets/culverts, signing & striping, quantities & estimates.</li>
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Pavements (AASHTO & mechanistic-empirical), asphalt binder/mixture testing, QA/QC, forensic & rehabilitation strategies, LCA.</li>
+            <li class="flex items-start gap-3"><i data-feather="check-circle" class="text-cyan-400 mt-0.5"></i> Instrumentation programs (thermal/adfreeze, settlement), data QA/QC, parametric & Monte Carlo analyses, reporting pipelines.</li>
+          </ul>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <h2 class="font-semibold text-lg mb-2">Quick Facts</h2>
+          <div class="space-y-2 text-slate-300">
+            <div class="flex items-center justify-between"><span>Headquarters</span><span>San Diego, CA</span></div>
+            <div class="flex items-center justify-between"><span>Regional Hubs</span><span>San Diego • Philadelphia</span></div>
+            <div class="flex items-center justify-between"><span>Practice Areas</span><span>Geo • Transportation • Pavements • Materials • Data</span></div>
+            <div class="flex items-center justify-between"><span>Delivery</span><span>Planning • Design • PM/CM • Advisory</span></div>
+            <div class="flex items-center justify-between"><span>Licensure</span><span>PE (multi-state)</span></div>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="badge">AASHTO</span><span class="badge">FHWA</span><span class="badge">USACE (select)</span><span class="badge">NAVFAC (select)</span>
+          </div>
+          <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
+            Work with us <i data-feather="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+'''
+    }
+}
+
+# Generate pages
+for page_file, page_data in PAGES.items():
+    content = HEAD.format(
+        title=page_data['title'],
+        description=page_data['description'],
+        page=page_file
+    ) + HEADER + page_data['content'] + FOOTER
+    
+    with open(page_file, 'w', encoding='utf-8') as f:
+        f.write(content)
+    print(f'Created {page_file}')
+
