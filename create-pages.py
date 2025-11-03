@@ -426,14 +426,14 @@ PAGES = {
           </div>
           <div class="card rounded-2xl p-6">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1581091878153-7e6f6ff6ce2c?w=800&h=600&fit=crop&q=80" alt="Geotechnical engineering" class="w-full h-full object-cover opacity-50">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&q=80" alt="Geotechnical engineering and construction" class="w-full h-full object-cover opacity-50">
             </div>
           </div>
         </div>
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="card rounded-2xl p-6 order-2 md:order-1">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&q=80" alt="Transportation engineering" class="w-full h-full object-cover opacity-50">
+              <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=600&fit=crop&q=80" alt="Transportation and highway engineering" class="w-full h-full object-cover opacity-50">
             </div>
           </div>
           <div class="order-1 md:order-2">
@@ -484,14 +484,14 @@ PAGES = {
           </div>
           <div class="card rounded-2xl p-6">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&q=80" alt="Pavement engineering" class="w-full h-full object-cover opacity-50">
+              <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop&q=80" alt="Pavement engineering and road construction" class="w-full h-full object-cover opacity-50">
             </div>
           </div>
         </div>
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="card rounded-2xl p-6 order-2 md:order-1">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80" alt="Data analytics" class="w-full h-full object-cover opacity-50">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80" alt="Data analytics and infrastructure monitoring" class="w-full h-full object-cover opacity-50">
             </div>
           </div>
           <div class="order-1 md:order-2">
@@ -536,7 +536,7 @@ PAGES = {
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1581091878153-7e6f6ff6ce2c?w=800&h=600&fit=crop&q=80" alt="Energy project" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=600&fit=crop&q=80" alt="Solar energy infrastructure project" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -555,7 +555,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&q=80" alt="Transportation project" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=600&fit=crop&q=80" alt="Highway and transportation infrastructure project" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -574,7 +574,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&q=80" alt="Pavement project" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop&q=80" alt="Pavement design and road construction project" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -593,7 +593,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80" alt="Geotechnical project" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&q=80" alt="Geotechnical foundation and construction project" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -612,7 +612,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1581091878153-7e6f6ff6ce2c?w=800&h=600&fit=crop&q=80" alt="Water infrastructure project" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80" alt="Water infrastructure and civil engineering project" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -631,7 +631,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&q=80" alt="Materials testing project" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80" alt="Materials testing and laboratory analysis" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -752,7 +752,7 @@ PAGES = {
       <div class="grid md:grid-cols-2 gap-12 mb-16">
         <div class="card rounded-2xl p-8 text-center">
           <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-400/20 to-blue-400/20">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&q=80" alt="Co-founder" class="w-full h-full object-cover opacity-80">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=600&fit=crop&q=80" alt="Professional engineer and co-founder" class="w-full h-full object-cover opacity-80">
           </div>
           <h2 class="text-2xl font-semibold mb-2">Co-Founder</h2>
           <p class="text-cyan-400 mb-4">Ph.D., P.E.</p>
@@ -766,7 +766,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl p-8 text-center">
           <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-400/20 to-blue-400/20">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=600&fit=crop&q=80" alt="Co-founder" class="w-full h-full object-cover opacity-80">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=600&fit=crop&q=80" alt="Professional engineer and co-founder" class="w-full h-full object-cover opacity-80">
           </div>
           <h2 class="text-2xl font-semibold mb-2">Co-Founder</h2>
           <p class="text-cyan-400 mb-4">Ph.D., P.E.</p>
@@ -812,7 +812,7 @@ PAGES = {
       <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
         <div class="card rounded-2xl p-8 text-center">
           <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden">
-            <img src="images/Arash_Hosseini.jpg" alt="Dr. Arash Hosseini" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&q=80'; this.onerror=null;">
+            <img src="images/Arash_Hosseini.jpg" alt="Dr. Arash Hosseini" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=600&fit=crop&q=80'; this.onerror=null;">
           </div>
           <h2 class="text-2xl font-semibold mb-2">Dr. Arash Hosseini</h2>
           <p class="text-cyan-400 mb-4">Advisory Panel Member</p>
@@ -1052,7 +1052,7 @@ PAGES = {
         <div class="grid md:grid-cols-2 gap-8 mb-12">
           <article class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
             <div class="aspect-video bg-gradient-to-br from-cyan-400/10 to-blue-400/10 relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1200&h=675&fit=crop&q=80" alt="Engineering the Future with Earth's Oldest Materials podcast" class="w-full h-full object-cover">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=675&fit=crop&q=80" alt="Professional engineering podcast recording studio" class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-[#0b1220]/90 to-transparent flex items-end p-6">
                 <div class="text-white">
                   <div class="text-xs uppercase tracking-wider text-cyan-300 mb-2">Featured Podcast</div>
@@ -1118,7 +1118,7 @@ PAGES = {
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1581091878153-7e6f6ff6ce2c?w=800&h=600&fit=crop&q=80" alt="Pavement engineering" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop&q=80" alt="Road construction and asphalt paving" class="w-full h-full object-cover">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Pavement Engineering</h3>
@@ -1127,7 +1127,7 @@ PAGES = {
             </div>
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&q=80" alt="Soil improvement" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&q=80" alt="Geotechnical soil testing and analysis" class="w-full h-full object-cover">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Soil Improvement</h3>
@@ -1136,7 +1136,7 @@ PAGES = {
             </div>
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&q=80" alt="Unsaturated soils" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1581091878153-7e6f6ff6ce2c?w=800&h=600&fit=crop&q=80" alt="Soil mechanics and testing equipment" class="w-full h-full object-cover">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Unsaturated Soils</h3>
@@ -1145,7 +1145,7 @@ PAGES = {
             </div>
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80" alt="Data analytics" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80" alt="Data visualization and analytics dashboard" class="w-full h-full object-cover">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Data Analytics</h3>
@@ -1160,7 +1160,7 @@ PAGES = {
           <div class="space-y-4">
             <div class="card rounded-xl overflow-hidden hover:border-cyan-400/30 transition">
               <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1581091878153-7e6f6ff6ce2c?w=1200&h=675&fit=crop&q=80" alt="Pavement deterioration study" class="w-full h-full object-cover opacity-50">
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&h=675&fit=crop&q=80" alt="Pavement engineering and road infrastructure" class="w-full h-full object-cover opacity-50">
               </div>
               <div class="p-6">
                 <div class="flex items-start justify-between gap-4">
@@ -1184,7 +1184,7 @@ PAGES = {
 
             <div class="card rounded-xl overflow-hidden hover:border-cyan-400/30 transition">
               <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=675&fit=crop&q=80" alt="Machine learning pavement prediction" class="w-full h-full object-cover opacity-50">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=675&fit=crop&q=80" alt="Data analytics and machine learning for infrastructure" class="w-full h-full object-cover opacity-50">
               </div>
               <div class="p-6">
                 <div class="flex items-start justify-between gap-4">
@@ -1208,7 +1208,7 @@ PAGES = {
 
             <div class="card rounded-xl overflow-hidden hover:border-cyan-400/30 transition">
               <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=675&fit=crop&q=80" alt="Electrokinetic soil improvement" class="w-full h-full object-cover opacity-50">
+                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&h=675&fit=crop&q=80" alt="Geotechnical engineering and soil improvement techniques" class="w-full h-full object-cover opacity-50">
               </div>
               <div class="p-6">
                 <div class="flex items-start justify-between gap-4">
