@@ -426,14 +426,14 @@ PAGES = {
           </div>
           <div class="card rounded-2xl p-6">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&q=80" alt="Geotechnical engineering and construction" class="w-full h-full object-cover opacity-50">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80" alt="Geotechnical drilling rig and soil investigation" class="w-full h-full object-cover opacity-50">
             </div>
           </div>
         </div>
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="card rounded-2xl p-6 order-2 md:order-1">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=600&fit=crop&q=80" alt="Transportation and highway engineering" class="w-full h-full object-cover opacity-50">
+              <img src="https://images.unsplash.com/photo-1554917418-63c8c87c3184?w=800&h=600&fit=crop&q=80" alt="Highway and roadway infrastructure design" class="w-full h-full object-cover opacity-50">
             </div>
           </div>
           <div class="order-1 md:order-2">
@@ -555,7 +555,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=600&fit=crop&q=80" alt="Highway and transportation infrastructure project" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1554917418-63c8c87c3184?w=800&h=600&fit=crop&q=80" alt="Highway rehabilitation and roadway engineering project" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -593,7 +593,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&q=80" alt="Geotechnical foundation and construction project" class="w-full h-full object-cover opacity-70">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80" alt="Geotechnical site investigation and foundation design project" class="w-full h-full object-cover opacity-70">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -1127,7 +1127,7 @@ PAGES = {
             </div>
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&q=80" alt="Geotechnical soil testing and analysis" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80" alt="Geotechnical drilling and soil investigation" class="w-full h-full object-cover">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Soil Improvement</h3>
@@ -1136,7 +1136,7 @@ PAGES = {
             </div>
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1581091878153-7e6f6ff6ce2c?w=800&h=600&fit=crop&q=80" alt="Soil mechanics and testing equipment" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80" alt="Ground improvement and soil stabilization techniques" class="w-full h-full object-cover">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Unsaturated Soils</h3>
@@ -1208,7 +1208,7 @@ PAGES = {
 
             <div class="card rounded-xl overflow-hidden hover:border-cyan-400/30 transition">
               <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&h=675&fit=crop&q=80" alt="Geotechnical engineering and soil improvement techniques" class="w-full h-full object-cover opacity-50">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&h=675&fit=crop&q=80" alt="Geotechnical engineering drilling and foundation work" class="w-full h-full object-cover opacity-50">
               </div>
               <div class="p-6">
                 <div class="flex items-start justify-between gap-4">
