@@ -214,7 +214,7 @@ PAGES = {
             </div>
             <div>
               <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Service Delivery</div>
-              <div class="font-medium">Planning • Design • PM/CM • Advisory</div>
+              <div class="font-medium">Planning • Design • PM/CM</div>
             </div>
             <div>
               <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Professional Licensure</div>
