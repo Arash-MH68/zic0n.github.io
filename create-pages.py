@@ -66,7 +66,6 @@ HEADER = '''  <header class="sticky top-0 z-50 bg-[#0b1220]/80 backdrop-blur bor
         <a href="projects.html" class="hover:text-white">Projects</a>
         <a href="approach.html" class="hover:text-white">Approach</a>
         <a href="leadership.html" class="hover:text-white">Leadership</a>
-        <a href="advisory.html" class="hover:text-white">Advisory Panel</a>
         <a href="newsletter.html" class="hover:text-white">Newsletter</a>
         <a href="faqs.html" class="hover:text-white">FAQs</a>
         <a href="contact.html" class="hover:text-white">Contact</a>
@@ -84,7 +83,6 @@ HEADER = '''  <header class="sticky top-0 z-50 bg-[#0b1220]/80 backdrop-blur bor
         <a href="projects.html" class="block hover:text-white">Projects</a>
         <a href="approach.html" class="block hover:text-white">Approach</a>
         <a href="leadership.html" class="block hover:text-white">Leadership</a>
-        <a href="advisory.html" class="block hover:text-white">Advisory Panel</a>
         <a href="newsletter.html" class="block hover:text-white">Newsletter</a>
         <a href="faqs.html" class="block hover:text-white">FAQs</a>
         <a href="contact.html" class="block hover:text-white">Contact</a>
@@ -112,7 +110,6 @@ FOOTER = '''  <footer class="border-t border-white/10 py-10">
         </div>
         <div class="flex items-center gap-4 text-slate-400">
           <a href="https://www.linkedin.com/company/zic0n" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="Zic0n Engineering on LinkedIn"><i data-feather="linkedin" aria-hidden="true"></i></a>
-          <a href="https://github.com/Arash-MH68/zic0n.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" aria-label="Zic0n Engineering on GitHub"><i data-feather="github" aria-hidden="true"></i></a>
           <a href="mailto:info@zic0n.com" class="hover:text-white transition" aria-label="Send email to Zic0n Engineering"><i data-feather="mail" aria-hidden="true"></i></a>
         </div>
       </div>
@@ -438,14 +435,14 @@ PAGES = {
           </div>
           <div class="card rounded-2xl p-6">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=800&h=600&fit=crop&q=80" alt="Geotechnical drilling rig and soil investigation" class="w-full h-full object-cover opacity-50">
+              <img src="images/geotechnical and geo structural.jpg" alt="Geotechnical drilling rig and soil investigation" class="w-full h-full object-cover" loading="lazy">
             </div>
           </div>
         </div>
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="card rounded-2xl p-6 order-2 md:order-1">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?w=800&h=600&fit=crop&q=80" alt="Highway and roadway infrastructure design" class="w-full h-full object-cover opacity-50">
+              <img src="images/transportation and roadway.jpg" alt="Highway and roadway infrastructure design" class="w-full h-full object-cover" loading="lazy">
             </div>
           </div>
           <div class="order-1 md:order-2">
@@ -496,7 +493,7 @@ PAGES = {
           </div>
           <div class="card rounded-2xl p-6">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80" alt="Pavement engineering and road construction" class="w-full h-full object-cover opacity-50">
+              <img src="images/pavement and material (capabilities).jpg" alt="Pavement engineering and road construction" class="w-full h-full object-cover" loading="lazy">
             </div>
           </div>
         </div>
@@ -548,7 +545,7 @@ PAGES = {
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop&q=80" alt="Solar energy infrastructure project" class="w-full h-full object-cover opacity-70">
+            <img src="images/solar and BESS design.webp" alt="Solar energy infrastructure project" class="w-full h-full object-cover" loading="lazy">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -567,7 +564,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?w=800&h=600&fit=crop&q=80" alt="Highway infrastructure and roadway rehabilitation" class="w-full h-full object-cover opacity-70">
+            <img src="images/road rehabilitation.jpg" alt="Highway infrastructure and roadway rehabilitation" class="w-full h-full object-cover" loading="lazy">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -586,7 +583,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80" alt="Asphalt paving and pavement construction" class="w-full h-full object-cover opacity-70">
+            <img src="images/pavement performance study.jpg" alt="Asphalt paving and pavement construction" class="w-full h-full object-cover" loading="lazy">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -605,7 +602,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=800&h=600&fit=crop&q=80" alt="Deep foundation construction with drilling rigs and piles" class="w-full h-full object-cover opacity-70">
+            <img src="images/deep foundation design.jpg" alt="Deep foundation construction with drilling rigs and piles" class="w-full h-full object-cover" loading="lazy">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -624,7 +621,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80" alt="Water infrastructure and civil engineering project" class="w-full h-full object-cover opacity-70">
+            <img src="images/levee assessment.webp" alt="Water infrastructure and civil engineering project" class="w-full h-full object-cover" loading="lazy">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -643,7 +640,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop&q=80" alt="Materials testing and laboratory analysis" class="w-full h-full object-cover opacity-70">
+            <img src="images/asphalt material research.jpg" alt="Materials testing and laboratory analysis" class="w-full h-full object-cover" loading="lazy">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -753,105 +750,96 @@ PAGES = {
     },
     'leadership.html': {
         'title': 'Leadership',
-        'description': 'Meet the leadership team at Zic0n Engineering: Ph.D. P.E.s with expertise in geotechnical and transportation engineering.',
+        'description': 'Meet the leadership team and advisory panel at Zic0n Engineering: Ph.D. P.E.s and industry experts.',
         'content': '''  <main id="main-content">
   <section class="section py-20">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <h1 class="text-4xl sm:text-5xl font-bold mb-4">Leadership Team</h1>
-        <p class="text-slate-300/90 text-lg">Partner-led engineering practice with Ph.D. and Professional Engineering expertise.</p>
+        <p class="text-slate-300/90 text-lg">Partner-led engineering practice with Ph.D. and Professional Engineering expertise, supported by an advisory panel of industry experts.</p>
       </div>
-      <div class="grid md:grid-cols-2 gap-12 mb-16">
-        <div class="card rounded-2xl p-8 text-center">
-          <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-400/20 to-blue-400/20">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=600&fit=crop&q=80" alt="Professional engineer and co-founder" class="w-full h-full object-cover opacity-80">
+      <div class="mb-20">
+        <h2 class="text-3xl font-semibold mb-8 text-center">Founders</h2>
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+          <div class="card rounded-2xl p-8 text-center">
+            <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-400/20 to-blue-400/20">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=600&fit=crop&q=80" alt="Professional engineer and co-founder" class="w-full h-full object-cover opacity-80" loading="lazy">
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Co-Founder</h3>
+            <p class="text-cyan-400 mb-4">Ph.D., P.E.</p>
+            <p class="text-slate-300/90 mb-4">Geotechnical & Geo-Structural Engineering</p>
+            <p class="text-sm text-slate-400 mb-6">Expertise in geotechnical design, instrumentation, slope stability, foundations, and ground improvement. Specialized experience with thermal/adfreeze systems and settlement monitoring programs.</p>
+            <div class="flex flex-wrap justify-center gap-2 mb-4">
+              <span class="badge text-xs">Geotechnical</span>
+              <span class="badge text-xs">Foundation Design</span>
+              <span class="badge text-xs">Instrumentation</span>
+            </div>
           </div>
-          <h2 class="text-2xl font-semibold mb-2">Co-Founder</h2>
-          <p class="text-cyan-400 mb-4">Ph.D., P.E.</p>
-          <p class="text-slate-300/90 mb-4">Geotechnical & Geo-Structural Engineering</p>
-          <p class="text-sm text-slate-400 mb-6">Expertise in geotechnical design, instrumentation, slope stability, foundations, and ground improvement. Specialized experience with thermal/adfreeze systems and settlement monitoring programs.</p>
-          <div class="flex flex-wrap justify-center gap-2 mb-4">
-            <span class="badge text-xs">Geotechnical</span>
-            <span class="badge text-xs">Foundation Design</span>
-            <span class="badge text-xs">Instrumentation</span>
+          <div class="card rounded-2xl p-8 text-center">
+            <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-400/20 to-blue-400/20">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=600&fit=crop&q=80" alt="Professional engineer and co-founder" class="w-full h-full object-cover opacity-80" loading="lazy">
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Co-Founder</h3>
+            <p class="text-cyan-400 mb-4">Ph.D., P.E.</p>
+            <p class="text-slate-300/90 mb-4">Transportation & Pavement Engineering</p>
+            <p class="text-sm text-slate-400 mb-6">Expertise in roadway design, pavement engineering, asphalt materials, and machine learning applications. Active research in pavement performance prediction and deterioration modeling.</p>
+            <div class="flex flex-wrap justify-center gap-2 mb-4">
+              <span class="badge text-xs">Transportation</span>
+              <span class="badge text-xs">Pavement</span>
+              <span class="badge text-xs">Materials</span>
+            </div>
+            <div class="mt-6">
+              <a href="newsletter.html" class="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 text-sm">
+                View Research Profile <i data-feather="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="card rounded-2xl p-8 text-center">
-          <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-400/20 to-blue-400/20">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=600&fit=crop&q=80" alt="Professional engineer and co-founder" class="w-full h-full object-cover opacity-80">
-          </div>
-          <h2 class="text-2xl font-semibold mb-2">Co-Founder</h2>
-          <p class="text-cyan-400 mb-4">Ph.D., P.E.</p>
-          <p class="text-slate-300/90 mb-4">Transportation & Pavement Engineering</p>
-          <p class="text-sm text-slate-400 mb-6">Expertise in roadway design, pavement engineering, asphalt materials, and machine learning applications. Active research in pavement performance prediction and deterioration modeling.</p>
-          <div class="flex flex-wrap justify-center gap-2 mb-4">
-            <span class="badge text-xs">Transportation</span>
-            <span class="badge text-xs">Pavement</span>
-            <span class="badge text-xs">Materials</span>
-          </div>
-          <div class="mt-6">
-            <a href="newsletter.html" class="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 text-sm">
-              View Research Profile <i data-feather="arrow-right" class="w-4 h-4"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="card rounded-2xl p-8 bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-        <h2 class="text-2xl font-semibold mb-4 text-center">Our Commitment</h2>
-        <p class="text-slate-300/90 text-center mb-6 max-w-2xl mx-auto">Both founders are licensed Professional Engineers with multi-state licensure and maintain active research programs. This unique combination of practical engineering experience and research innovation allows us to deliver cutting-edge solutions grounded in proven methodologies.</p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <span class="badge">Multi-State PE Licensed</span>
-          <span class="badge">Active Research</span>
-          <span class="badge">Published Research</span>
-          <span class="badge">Industry Experience</span>
-        </div>
-      </div>
-    </div>
-  </section>
-  </main>
-'''
-    },
-    'advisory.html': {
-        'title': 'Advisory Panel',
-        'description': 'Zic0n Engineering\'s advisory panel: industry experts providing strategic guidance and technical expertise.',
-        'content': '''  <main id="main-content">
-  <section class="section py-20">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4">Advisory Panel</h1>
-        <p class="text-slate-300/90 text-lg">Industry experts providing strategic guidance and technical expertise to advance our engineering practice.</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-        <div class="card rounded-2xl p-8 text-center">
-          <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden">
-            <img src="images/Arash_Hosseini.jpg" alt="Dr. Arash Hosseini" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=600&fit=crop&q=80'; this.onerror=null;">
-          </div>
-          <h2 class="text-2xl font-semibold mb-2">Dr. Arash Hosseini</h2>
-          <p class="text-cyan-400 mb-4">Advisory Panel Member</p>
-          <p class="text-slate-300/90 mb-4">Expert in geotechnical engineering, pavement engineering, and materials science with extensive research and industry experience.</p>
-          <div class="flex flex-wrap justify-center gap-2">
-            <span class="badge text-xs">Geotechnical</span>
-            <span class="badge text-xs">Pavement</span>
-            <span class="badge text-xs">Research</span>
-          </div>
-        </div>
-        <div class="card rounded-2xl p-8 text-center">
-          <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-400/20 to-blue-400/20 flex items-center justify-center">
-            <i data-feather="user" class="w-24 h-24 text-cyan-400/50"></i>
-          </div>
-          <h2 class="text-2xl font-semibold mb-2">Dr. Ahmed Abdalla</h2>
-          <p class="text-cyan-400 mb-4">Advisory Panel Member</p>
-          <p class="text-slate-300/90 mb-4">Expert in civil engineering with specialized knowledge in infrastructure systems and engineering practice.</p>
-          <div class="flex flex-wrap justify-center gap-2">
-            <span class="badge text-xs">Infrastructure</span>
-            <span class="badge text-xs">Engineering</span>
-            <span class="badge text-xs">Advisory</span>
+        <div class="card rounded-2xl p-8 bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
+          <h3 class="text-2xl font-semibold mb-4 text-center">Our Commitment</h3>
+          <p class="text-slate-300/90 text-center mb-6 max-w-2xl mx-auto">Both founders are licensed Professional Engineers with multi-state licensure and maintain active research programs. This unique combination of practical engineering experience and research innovation allows us to deliver cutting-edge solutions grounded in proven methodologies.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <span class="badge">Multi-State PE Licensed</span>
+            <span class="badge">Active Research</span>
+            <span class="badge">Published Research</span>
+            <span class="badge">Industry Experience</span>
           </div>
         </div>
       </div>
-      <div class="mt-16 card rounded-2xl p-8 bg-gradient-to-br from-cyan-400/10 to-blue-400/10 text-center max-w-3xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-4">Advisory Panel Mission</h2>
-        <p class="text-slate-300/90">Our advisory panel provides strategic guidance, technical review, and industry insights to ensure Zic0n Engineering maintains the highest standards of engineering excellence and remains at the forefront of technological innovation.</p>
+      <div>
+        <h2 class="text-3xl font-semibold mb-8 text-center">Advisory Panel</h2>
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-12">
+          <div class="card rounded-2xl p-8 text-center">
+            <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden">
+              <img src="images/Arash_Hosseini.jpg" alt="Dr. Arash Hosseini" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Dr. Arash Hosseini</h3>
+            <p class="text-cyan-400 mb-4">Advisory Panel Member</p>
+            <p class="text-slate-300/90 mb-4">Expert in geotechnical engineering, pavement engineering, and materials science with extensive research and industry experience.</p>
+            <div class="flex flex-wrap justify-center gap-2">
+              <span class="badge text-xs">Geotechnical</span>
+              <span class="badge text-xs">Pavement</span>
+              <span class="badge text-xs">Research</span>
+            </div>
+          </div>
+          <div class="card rounded-2xl p-8 text-center">
+            <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden">
+              <img src="images/Dr Ahmed Abdalla.jpeg" alt="Dr. Ahmed Abdalla" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Dr. Ahmed Abdalla</h3>
+            <p class="text-cyan-400 mb-4">Advisory Panel Member</p>
+            <p class="text-slate-300/90 mb-4">Expert in civil engineering with specialized knowledge in infrastructure systems and engineering practice.</p>
+            <div class="flex flex-wrap justify-center gap-2">
+              <span class="badge text-xs">Infrastructure</span>
+              <span class="badge text-xs">Engineering</span>
+              <span class="badge text-xs">Advisory</span>
+            </div>
+          </div>
+        </div>
+        <div class="card rounded-2xl p-8 bg-gradient-to-br from-cyan-400/10 to-blue-400/10 text-center max-w-3xl mx-auto">
+          <h3 class="text-2xl font-semibold mb-4">Advisory Panel Mission</h3>
+          <p class="text-slate-300/90">Our advisory panel provides strategic guidance, technical review, and industry insights to ensure Zic0n Engineering maintains the highest standards of engineering excellence and remains at the forefront of technological innovation.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1028,9 +1016,6 @@ PAGES = {
             <div class="flex gap-4">
               <a href="https://www.linkedin.com/company/zic0n" target="_blank" rel="noopener noreferrer" class="h-12 w-12 rounded-lg bg-cyan-400/20 grid place-items-center hover:bg-cyan-400/30 transition">
                 <i data-feather="linkedin" class="text-cyan-400"></i>
-              </a>
-              <a href="https://github.com/Arash-MH68/zic0n.github.io" target="_blank" rel="noopener noreferrer" class="h-12 w-12 rounded-lg bg-cyan-400/20 grid place-items-center hover:bg-cyan-400/30 transition">
-                <i data-feather="github" class="text-cyan-400"></i>
               </a>
             </div>
           </div>
