@@ -521,7 +521,7 @@ PAGES = {
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="card rounded-2xl p-6 order-2 md:order-1">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80" alt="Data analytics and infrastructure monitoring" class="w-full h-full object-cover opacity-50">
+              <img src="images/pavement performance study.jpg" alt="Data analytics and infrastructure monitoring" class="w-full h-full object-cover" loading="lazy">
             </div>
           </div>
           <div class="order-1 md:order-2">
@@ -798,7 +798,7 @@ PAGES = {
           </div>
           <div class="card rounded-2xl p-8 text-center">
             <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden">
-              <img src="images/Arash_Hosseini.jpg" alt="Professional engineer and co-founder" class="w-full h-full object-cover" loading="lazy">
+              <img src="images/Dr Ahmed Abdalla.jpeg" alt="Professional engineer and co-founder" class="w-full h-full object-cover" loading="lazy">
             </div>
             <h3 class="text-2xl font-semibold mb-2">Co-Founder</h3>
             <p class="text-cyan-400 mb-4">Ph.D., P.E.</p>
