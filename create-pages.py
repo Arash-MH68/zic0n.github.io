@@ -198,19 +198,40 @@ PAGES = {
           </ul>
         </div>
         <div class="card rounded-2xl p-6">
-          <h2 class="font-semibold text-lg mb-2">Quick Facts</h2>
-          <div class="space-y-2 text-slate-300">
-            <div class="flex items-center justify-between"><span>Headquarters</span><span>San Diego, CA</span></div>
-            <div class="flex items-center justify-between"><span>Regional Hubs</span><span>San Diego • Philadelphia</span></div>
-            <div class="flex items-center justify-between"><span>Practice Areas</span><span>Geo • Transportation • Pavements • Materials • Data</span></div>
-            <div class="flex items-center justify-between"><span>Delivery</span><span>Planning • Design • PM/CM • Advisory</span></div>
-            <div class="flex items-center justify-between"><span>Licensure</span><span>PE (multi-state)</span></div>
+          <h2 class="font-semibold text-lg mb-4 pb-3 border-b border-white/10">Quick Facts</h2>
+          <div class="space-y-4 text-slate-300">
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Headquarters</div>
+              <div class="font-medium">San Diego, CA</div>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Regional Offices</div>
+              <div class="font-medium">San Diego, CA • Philadelphia, PA</div>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Practice Areas</div>
+              <div class="font-medium">Geotechnical • Transportation • Pavements • Materials • Data Analytics</div>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Service Delivery</div>
+              <div class="font-medium">Planning • Design • PM/CM • Advisory</div>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Professional Licensure</div>
+              <div class="font-medium">PE (Multi-State Licensed)</div>
+            </div>
           </div>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="badge">AASHTO</span><span class="badge">FHWA</span><span class="badge">USACE (select)</span><span class="badge">NAVFAC (select)</span>
+          <div class="mt-6 pt-4 border-t border-white/10">
+            <div class="text-xs uppercase tracking-wider text-slate-400 mb-3">Standards & Guidelines</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge">AASHTO</span>
+              <span class="badge">FHWA</span>
+              <span class="badge">USACE</span>
+              <span class="badge">NAVFAC</span>
+            </div>
           </div>
-          <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-            Work with us <i data-feather="arrow-right"></i>
+          <a href="contact.html" class="mt-6 inline-flex items-center justify-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-300 hover:text-cyan-200 hover:bg-cyan-500/20 transition w-full">
+            Work with us <i data-feather="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>
       </div>
@@ -762,8 +783,8 @@ PAGES = {
         <h2 class="text-3xl font-semibold mb-8 text-center">Founders</h2>
         <div class="grid md:grid-cols-2 gap-12 mb-16">
           <div class="card rounded-2xl p-8 text-center">
-            <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-400/20 to-blue-400/20">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=600&fit=crop&q=80" alt="Professional engineer and co-founder" class="w-full h-full object-cover opacity-80" loading="lazy">
+            <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden">
+              <img src="images/Arash_Hosseini.jpg" alt="Professional engineer and co-founder" class="w-full h-full object-cover" loading="lazy">
             </div>
             <h3 class="text-2xl font-semibold mb-2">Co-Founder</h3>
             <p class="text-cyan-400 mb-4">Ph.D., P.E.</p>
@@ -776,8 +797,8 @@ PAGES = {
             </div>
           </div>
           <div class="card rounded-2xl p-8 text-center">
-            <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-400/20 to-blue-400/20">
-              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=600&fit=crop&q=80" alt="Professional engineer and co-founder" class="w-full h-full object-cover opacity-80" loading="lazy">
+            <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden">
+              <img src="images/Arash_Hosseini.jpg" alt="Professional engineer and co-founder" class="w-full h-full object-cover" loading="lazy">
             </div>
             <h3 class="text-2xl font-semibold mb-2">Co-Founder</h3>
             <p class="text-cyan-400 mb-4">Ph.D., P.E.</p>
