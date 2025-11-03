@@ -150,79 +150,23 @@
 
         <div class="relative">
           <div class="card rounded-2xl p-6 shadow-soft">
-            <div class="aspect-video rounded-xl bg-gradient-to-br from-cyan-400/10 to-blue-400/10 border border-white/10 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=675&fit=crop&q=80" alt="Professional civil engineering infrastructure" class="w-full h-full object-cover opacity-20 absolute inset-0">
-              <div class="absolute inset-0 grid place-items-center z-10 p-8">
-              <!-- Professional Engineering Services Diagram -->
-              <svg viewBox="0 0 800 400" class="w-full h-full max-w-full">
-                <defs>
-                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
-                  </linearGradient>
-                  <filter id="glow">
-                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                    <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                </defs>
-                
-                <!-- Background grid -->
-                <g opacity="0.15">
-                  <defs>
-                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#22d3ee" stroke-width="0.5"/>
-                    </pattern>
-                </defs>
-                  <rect width="800" height="400" fill="url(#grid)"/>
-                </g>
-                
-                <!-- Service Categories -->
-                <g transform="translate(50, 50)">
-                  <!-- Geotechnical Section -->
-                  <rect x="0" y="0" width="180" height="140" rx="8" fill="rgba(34,211,238,0.1)" stroke="url(#grad1)" stroke-width="2" filter="url(#glow)"/>
-                  <text x="90" y="25" text-anchor="middle" fill="#22d3ee" font-size="14" font-weight="bold">Geotechnical</text>
-                  <circle cx="90" cy="55" r="15" fill="none" stroke="#22d3ee" stroke-width="2"/>
-                  <line x1="90" y1="70" x2="90" y2="100" stroke="#22d3ee" stroke-width="2"/>
-                  <line x1="75" y1="85" x2="105" y2="85" stroke="#22d3ee" stroke-width="2"/>
-                  <text x="90" y="120" text-anchor="middle" fill="#cbd5e1" font-size="10">Foundations • Slopes</text>
-                  
-                  <!-- Transportation Section -->
-                  <rect x="210" y="0" width="180" height="140" rx="8" fill="rgba(96,165,250,0.1)" stroke="url(#grad1)" stroke-width="2" filter="url(#glow)"/>
-                  <text x="300" y="25" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="bold">Transportation</text>
-                  <path d="M 250 80 L 300 60 L 350 80" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
-                  <line x1="250" y1="80" x2="350" y2="80" stroke="#e5e7eb" stroke-width="2"/>
-                  <text x="300" y="120" text-anchor="middle" fill="#cbd5e1" font-size="10">Roadways • Drainage</text>
-                  
-                  <!-- Pavements Section -->
-                  <rect x="420" y="0" width="180" height="140" rx="8" fill="rgba(34,211,238,0.1)" stroke="url(#grad1)" stroke-width="2" filter="url(#glow)"/>
-                  <text x="510" y="25" text-anchor="middle" fill="#22d3ee" font-size="14" font-weight="bold">Pavements</text>
-                  <rect x="470" y="60" width="80" height="40" rx="4" fill="rgba(96,165,250,0.2)" stroke="#60a5fa" stroke-width="2"/>
-                  <text x="510" y="120" text-anchor="middle" fill="#cbd5e1" font-size="10">Materials • Testing</text>
-                  
-                  <!-- Data Analytics Section -->
-                  <rect x="630" y="0" width="120" height="140" rx="8" fill="rgba(96,165,250,0.1)" stroke="url(#grad1)" stroke-width="2" filter="url(#glow)"/>
-                  <text x="690" y="25" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="bold">Analytics</text>
-                  <rect x="660" y="50" width="60" height="40" rx="4" fill="none" stroke="#60a5fa" stroke-width="2"/>
-                  <line x1="670" y1="70" x2="690" y2="50" stroke="#22d3ee" stroke-width="2"/>
-                  <line x1="690" y1="50" x2="710" y2="70" stroke="#22d3ee" stroke-width="2"/>
-                  <text x="690" y="120" text-anchor="middle" fill="#cbd5e1" font-size="10">ML • Modeling</text>
-                </g>
-                
-                <!-- Connecting Lines -->
-                <path d="M 140 140 L 140 200 L 660 200 L 660 140" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5" stroke-dasharray="5,5"/>
-                
-                <!-- Bottom Banner -->
-                <rect x="50" y="260" width="700" height="100" rx="8" fill="rgba(34,211,238,0.05)" stroke="url(#grad1)" stroke-width="1.5" opacity="0.8"/>
-                <text x="400" y="295" text-anchor="middle" fill="#22d3ee" font-size="16" font-weight="bold">Integrated Engineering Solutions</text>
-                <text x="400" y="320" text-anchor="middle" fill="#cbd5e1" font-size="12">Site Investigation • Design • Construction Support • Performance Verification</text>
-                <text x="400" y="340" text-anchor="middle" fill="#94a3b8" font-size="11">Research-Backed • Data-Driven • Client-Focused</text>
-              </svg>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10 border border-white/10">
+                <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=1200&h=675&fit=crop&q=80" alt="Geotechnical drilling rig in operation at construction site" class="w-full h-full object-cover">
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10 border border-white/10">
+                  <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=800&fit=crop&q=80" alt="Asphalt laboratory mixture samples and testing materials" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10 border border-white/10">
+                  <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=800&fit=crop&q=80" alt="Asphalt materials testing in laboratory setting" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10 border border-white/10 col-span-2">
+                  <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=1200&h=600&fit=crop&q=80" alt="Geotechnical drilling operations and soil investigation" class="w-full h-full object-cover">
+                </div>
               </div>
             </div>
-            <p class="text-slate-300/90 mt-4 text-sm">
+            <p class="text-slate-300/90 mt-6 text-sm">
               We convert uncertainty into decisions by merging field and lab data, physics-based models, state standards, and constructability.
             </p>
           </div>
