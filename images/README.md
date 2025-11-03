@@ -1,27 +1,52 @@
-# Advisory Panel Images
+# Images Directory
 
-## Image Requirements
+## Current Images
 
-Place the advisory panel member photos in this directory.
+- ✅ `Arash_Hosseini.jpg` - Dr. Arash Hosseini photo (advisory panel)
 
-### File Naming:
-- First advisor photo: `advisory-panel-member.jpg` (or `.png`)
-- Dr. Ahmed Abdalla photo: `dr-ahmed-abdalla.jpg` (or `.png`)
+## Images Needed
 
-### Image Specifications:
-- **Aspect Ratio:** 3:4 (portrait orientation)
-- **Recommended Size:** 600x800px or larger
+### Newsletter & Research
+
+- `podcast-episode-45.jpg` - Podcast episode cover image (recommended: 1200x675px)
+  - Related to "Engineering the Future with Earth's Oldest Materials" podcast
+
+### Home Page
+
+- `engineering-schematic.jpg` - Engineering schematic/technical diagram (recommended: 1200x675px)
+  - Geotechnical and roadway engineering visualization
+
+### Projects Section (Future)
+
+- `project-solar-bess.jpg` - Solar/BESS project image (recommended: 1200x675px)
+- `project-roadway.jpg` - Roadway/transportation project image (recommended: 1200x675px)
+
+### General Website
+
+- `dr-ahmed-abdalla.jpg` - Dr. Ahmed Abdalla photo (recommended: 600x800px portrait, 3:4 ratio)
+
+### Team/Leadership
+
+- `founder-geotechnical.jpg` - Founder photo (optional, recommended: 600x800px portrait)
+- `founder-transportation.jpg` - Founder photo (optional, recommended: 600x800px portrait)
+
+## Image Specifications
+
 - **Format:** JPG or PNG
-- **Optimization:** Compress images for web (keep file size under 500KB if possible)
+- **Optimization:** Compress for web (keep under 500KB if possible)
+- **Aspect Ratios:**
+  - Portrait photos: 3:4 (600x800px or similar)
+  - Landscape photos: 16:9 (1200x675px or similar)
+  - Square photos: 1:1 (800x800px or similar)
 
-### Current Status:
-- ✅ Placeholder structure created for both advisors
-- 📷 First advisor image path: `images/advisory-panel-member.jpg`
-- 📷 Dr. Ahmed Abdalla image path: `images/dr-ahmed-abdalla.jpg` (to be added)
+## Sources for Stock Photos
 
-### Adding Images:
-1. Save your photos in this `images/` directory
-2. Name them exactly as specified above
-3. The website will automatically display them when the files are present
-4. If an image is missing, a placeholder icon will be shown
+- Unsplash.com (free, high-quality)
+- Pexels.com (free, diverse library)
+- Pixabay.com (free, various formats)
 
+## Notes
+
+- All images should be professional and relevant to civil engineering
+- Ensure proper licensing for any stock photos used
+- Images will automatically fall back to placeholders if missing
