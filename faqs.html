@@ -11,32 +11,21 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://zic0n.com/faqs.html" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%2322d3ee' d='M3 12L12 3l9 9-9 9-9-9Z'/><path fill='%2360a5fa' d='M12 7v10M7 12h10'/></svg>" />
-  <script src="https://cdn.tailwindcss.com" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- ======= Preload Critical Resources ======= -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons" defer></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  
+  <!-- ======= Custom Styles ======= -->
+  <link rel="stylesheet" href="styles.css">
   <meta property="og:title" content="FAQs | Zic0n Engineering" />
   <meta property="og:description" content="Frequently asked questions about Zic0n Engineering's services, expertise, and project delivery." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zic0n.com/faqs.html" />
-  <style>
-    :root { --bg: #0b1220; --card: #111a2c; --muted: #94a3b8; --brand: #22d3ee; --accent: #60a5fa; --lime: #a3e635; }
-    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: #e5e7eb; }
-    .glass { background: linear-gradient(140deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.08); }
-    .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); }
-    .gradient-text { background: linear-gradient(90deg, var(--brand), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .tag { border: 1px dashed rgba(255,255,255,0.15); }
-    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
-    .section { scroll-margin-top: 90px; }
-    details[open] summary .chev { transform: rotate(180deg); }
-    .badge { border:1px solid rgba(255,255,255,0.12); border-radius:.5rem; padding:.25rem .5rem; font-size:.75rem; color:#cbd5e1 }
-    .grid-cols-auto { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    html { scroll-behavior: smooth; }
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
-    .sr-only.focus\:not-sr-only:focus { position: static; width: auto; height: auto; padding: inherit; margin: inherit; overflow: visible; clip: auto; white-space: normal; }
-    *:focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; }
-  </style>
 </head>
 
 <body class="antialiased">
@@ -61,11 +50,11 @@
         <a href="faqs.html" class="hover:text-white">FAQs</a>
         <a href="contact.html" class="hover:text-white">Contact</a>
       </nav>
-      <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-white/10" aria-label="Open menu">
+      <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-white/10 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <i data-feather="menu"></i>
       </button>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10" role="navigation" aria-label="Mobile navigation">
       <nav class="px-4 py-3 space-y-2 text-slate-300">
         <a href="about.html" class="block hover:text-white">About</a>
         <a href="services.html" class="block hover:text-white">Services</a>
@@ -194,58 +183,12 @@
     </div>
   </footer>
 
-  <script>
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        feather.replace();
-        initializeApp();
-      });
-    } else {
-      feather.replace();
-      initializeApp();
-    }
-    function initializeApp() {
-      const yearEl = document.getElementById('year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-      
-      // Active navigation highlighting
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      const navLinks = document.querySelectorAll('nav a[href]');
-      navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
-          link.classList.add('text-cyan-400', 'font-medium');
-        }
-      });
-      
-      const menuBtn = document.getElementById('menuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-          const icon = menuBtn.querySelector('i');
-          if (icon) {
-            if (mobileMenu.classList.contains('hidden')) {
-              icon.setAttribute('data-feather', 'menu');
-            } else {
-              icon.setAttribute('data-feather', 'x');
-            }
-            feather.replace();
-          }
-        });
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            const icon = menuBtn.querySelector('i');
-            if (icon) {
-              icon.setAttribute('data-feather', 'menu');
-              feather.replace();
-            }
-          });
-        });
-      }
-    }
-  </script>
+  <!-- ======= Back to Top Button ======= -->
+  <button id="backToTop" class="back-to-top no-print" aria-label="Back to top">
+    <i data-feather="arrow-up"></i>
+  </button>
+
+  <!-- ======= Custom JavaScript ======= -->
+  <script src="app.js"></script>
 </body>
 </html>

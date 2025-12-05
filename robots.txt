@@ -1,0 +1,15 @@
+# robots.txt for Zic0n Engineering
+# https://zic0n.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://zic0n.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
+# Disallow specific paths if needed
+# Disallow: /private/
+# Disallow: /temp/
