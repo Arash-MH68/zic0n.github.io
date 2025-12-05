@@ -95,8 +95,20 @@
       <li aria-current="page" class="text-cyan-400">Contact</li>
     </ol>
   </nav>  <main id="main-content">
-  <section class="section py-20">
-    <div class="max-w-7xl mx-auto px-6">
+  <section class="section py-20 relative overflow-hidden">
+    <!-- Video Background -->
+    <div class="absolute inset-0 z-0">
+      <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-25" poster="images/drill rig.jpg" id="drillRigVideo">
+        <!-- Try local video first, then fallback to online sources -->
+        <source src="images/drilling-rig-video.mp4" type="video/mp4">
+        <source src="https://videos.pexels.com/video-files/3045163/3045163-uhd_2560_1440_25fps.mp4" type="video/mp4">
+        <source src="https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_25fps.mp4" type="video/mp4">
+        <!-- Fallback image if video doesn't load -->
+        <img src="images/drill rig.jpg" alt="Drilling rig background" class="w-full h-full object-cover">
+      </video>
+      <div class="absolute inset-0 bg-[#0b1220]/75"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <h1 class="text-4xl sm:text-5xl font-bold mb-4">Contact Us</h1>
         <p class="text-slate-300/90 text-lg">Get in touch to discuss your engineering project needs. We're here to help.</p>

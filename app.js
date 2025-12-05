@@ -236,5 +236,15 @@
     if (typeof feather !== 'undefined') {
       feather.replace();
     }
+    
+    // Handle video background on contact page
+    const drillRigVideo = document.getElementById('drillRigVideo');
+    if (drillRigVideo) {
+      // Try to play video, fallback to image if it fails
+      drillRigVideo.play().catch(() => {
+        // If video fails to play, hide it and show poster image
+        drillRigVideo.style.display = 'none';
+      });
+    }
   });
 })();
