@@ -13,6 +13,7 @@
     initializeMobileMenu();
     initializeBackToTop();
     initializeAnimations();
+    initializeLazyLoading();
     initializeFormValidation();
   }
 
@@ -131,6 +132,51 @@
     // Observe cards and sections
     document.querySelectorAll('.card, .section > div').forEach(el => {
       observer.observe(el);
+    });
+  }
+
+  // Lazy load images
+  function initializeLazyLoading() {
+    if (!('IntersectionObserver' in window)) {
+      // Fallback for older browsers
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        img.src = img.dataset.src;
+        if (img.dataset.srcset) {
+          img.srcset = img.dataset.srcset;
+        }
+      });
+      return;
+    }
+
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          
+          // Load the image
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+          }
+          if (img.dataset.srcset) {
+            img.srcset = img.dataset.srcset;
+          }
+          
+          // Remove loading class and add loaded class
+          img.classList.remove('lazy-loading');
+          img.classList.add('lazy-loaded');
+          
+          imageObserver.unobserve(img);
+        }
+      });
+    }, {
+      rootMargin: '50px 0px',
+      threshold: 0.01
+    });
+
+    // Observe all images with data-src
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      img.classList.add('lazy-loading');
+      imageObserver.observe(img);
     });
   }
 

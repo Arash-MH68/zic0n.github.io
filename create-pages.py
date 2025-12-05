@@ -17,37 +17,75 @@ HEAD = '''<!DOCTYPE html>
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://zic0n.com/{page}" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%2322d3ee' d='M3 12L12 3l9 9-9 9-9-9Z'/><path fill='%2360a5fa' d='M12 7v10M7 12h10'/></svg>" />
-  <script src="https://cdn.tailwindcss.com" defer></script>
+  
+  <!-- ======= Preload Critical Resources ======= -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  
+  <!-- ======= Tailwind (CDN) ======= -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- ======= Fonts / Icons ======= -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons" defer></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  
+  <!-- ======= Custom Styles ======= -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- ======= Open Graph ======= -->
   <meta property="og:title" content="{title} | Zic0n Engineering" />
   <meta property="og:description" content="{description}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zic0n.com/{page}" />
-  <style>
-    :root {{ --bg: #0b1220; --card: #111a2c; --muted: #94a3b8; --brand: #22d3ee; --accent: #60a5fa; --lime: #a3e635; }}
-    html, body {{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: #e5e7eb; }}
-    .glass {{ background: linear-gradient(140deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.08); }}
-    .card {{ background: var(--card); border: 1px solid rgba(255,255,255,0.06); }}
-    .gradient-text {{ background: linear-gradient(90deg, var(--brand), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }}
-    .tag {{ border: 1px dashed rgba(255,255,255,0.15); }}
-    .shadow-soft {{ box-shadow: 0 10px 30px rgba(0,0,0,0.35); }}
-    .section {{ scroll-margin-top: 90px; }}
-    details[open] summary .chev {{ transform: rotate(180deg); }}
-    .badge {{ border:1px solid rgba(255,255,255,0.12); border-radius:.5rem; padding:.25rem .5rem; font-size:.75rem; color:#cbd5e1 }}
-    .grid-cols-auto {{ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }}
-    html {{ scroll-behavior: smooth; }}
-    .sr-only {{ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }}
-    .sr-only.focus\\:not-sr-only:focus {{ position: static; width: auto; height: auto; padding: inherit; margin: inherit; overflow: visible; clip: auto; white-space: normal; }}
-    *:focus-visible {{ outline: 2px solid #22d3ee; outline-offset: 2px; }}
-  </style>
+  <meta property="og:image" content="https://zic0n.com/images/og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Zic0n Engineering" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- ======= Twitter Card ======= -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{title} | Zic0n Engineering" />
+  <meta name="twitter:description" content="{description}" />
+  <meta name="twitter:image" content="https://zic0n.com/images/og-default.jpg" />
+  <meta name="twitter:site" content="@zic0n" />
 </head>
 
 <body class="antialiased">
   <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-black focus:rounded-lg">Skip to main content</a>
 '''
+
+# Breadcrumb navigation helper function
+def get_breadcrumbs(page_file):
+    """Generate breadcrumb navigation based on page"""
+    breadcrumbs = {
+        'index.html': [],
+        'about.html': [('Home', 'index.html'), ('About', 'about.html')],
+        'services.html': [('Home', 'index.html'), ('Services', 'services.html')],
+        'markets.html': [('Home', 'index.html'), ('Markets', 'markets.html')],
+        'capabilities.html': [('Home', 'index.html'), ('Capabilities', 'capabilities.html')],
+        'projects.html': [('Home', 'index.html'), ('Projects', 'projects.html')],
+        'approach.html': [('Home', 'index.html'), ('Approach', 'approach.html')],
+        'leadership.html': [('Home', 'index.html'), ('Leadership', 'leadership.html')],
+        'newsletter.html': [('Home', 'index.html'), ('Newsletter', 'newsletter.html')],
+        'faqs.html': [('Home', 'index.html'), ('FAQs', 'faqs.html')],
+        'contact.html': [('Home', 'index.html'), ('Contact', 'contact.html')],
+    }
+    crumbs = breadcrumbs.get(page_file, [])
+    if not crumbs:
+        return ''
+    
+    breadcrumb_html = '<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-6 py-4">\n    <ol class="flex items-center gap-2 text-sm text-slate-400">\n'
+    for i, (label, href) in enumerate(crumbs):
+        if i == len(crumbs) - 1:
+            breadcrumb_html += f'      <li aria-current="page" class="text-cyan-400">{label}</li>\n'
+        else:
+            breadcrumb_html += f'      <li><a href="{href}" class="hover:text-white transition">{label}</a></li>\n'
+            breadcrumb_html += '      <li aria-hidden="true"><i data-feather="chevron-right" class="w-4 h-4"></i></li>\n'
+    breadcrumb_html += '    </ol>\n  </nav>'
+    return breadcrumb_html
 
 # Common header/nav
 HEADER = '''  <header class="sticky top-0 z-50 bg-[#0b1220]/80 backdrop-blur border-b border-white/10">
@@ -70,11 +108,11 @@ HEADER = '''  <header class="sticky top-0 z-50 bg-[#0b1220]/80 backdrop-blur bor
         <a href="faqs.html" class="hover:text-white">FAQs</a>
         <a href="contact.html" class="hover:text-white">Contact</a>
       </nav>
-      <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-white/10" aria-label="Open menu">
+      <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-white/10 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <i data-feather="menu"></i>
       </button>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10" role="navigation" aria-label="Mobile navigation">
       <nav class="px-4 py-3 space-y-2 text-slate-300">
         <a href="about.html" class="block hover:text-white">About</a>
         <a href="services.html" class="block hover:text-white">Services</a>
@@ -116,58 +154,38 @@ FOOTER = '''  <footer class="border-t border-white/10 py-10">
     </div>
   </footer>
 
-  <script>
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        feather.replace();
-        initializeApp();
-      });
-    } else {
-      feather.replace();
-      initializeApp();
-    }
-    function initializeApp() {
-      const yearEl = document.getElementById('year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-      
-      // Active navigation highlighting
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      const navLinks = document.querySelectorAll('nav a[href]');
-      navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
-          link.classList.add('text-cyan-400', 'font-medium');
-        }
-      });
-      
-      const menuBtn = document.getElementById('menuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-          const icon = menuBtn.querySelector('i');
-          if (icon) {
-            if (mobileMenu.classList.contains('hidden')) {
-              icon.setAttribute('data-feather', 'menu');
-            } else {
-              icon.setAttribute('data-feather', 'x');
-            }
-            feather.replace();
-          }
-        });
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            const icon = menuBtn.querySelector('i');
-            if (icon) {
-              icon.setAttribute('data-feather', 'menu');
-              feather.replace();
-            }
-          });
-        });
-      }
-    }
+  <!-- ======= Back to Top Button ======= -->
+  <button id="backToTop" class="back-to-top no-print" aria-label="Back to top">
+    <i data-feather="arrow-up"></i>
+  </button>
+
+  <!-- ======= Custom JavaScript ======= -->
+  <script src="app.js"></script>
+  
+  <!-- ======= JSON-LD Structured Data ======= -->
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zic0n Engineering",
+    "url": "https://zic0n.com",
+    "logo": "https://zic0n.com/images/logo.png",
+    "description": "Partner-led civil engineering practice providing geotechnical, transportation, pavements & materials expertise.",
+    "address": {{
+      "@type": "PostalAddress",
+      "addressLocality": "San Diego",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }},
+    "contactPoint": {{
+      "@type": "ContactPoint",
+      "email": "info@zic0n.com",
+      "contactType": "Customer Service"
+    }},
+    "sameAs": [
+      "https://www.linkedin.com/company/zic0n"
+    ]
+  }}
   </script>
 </body>
 </html>
@@ -456,14 +474,14 @@ PAGES = {
           </div>
           <div class="card rounded-2xl p-6">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="images/geotechnical and geo structural.jpg" alt="Geotechnical drilling rig and soil investigation" class="w-full h-full object-cover" loading="lazy">
+              <img src="images/geotechnical and geo structural.jpg" alt="Geotechnical drilling rig and soil investigation" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=800&h=600&fit=crop&q=80'">
             </div>
           </div>
         </div>
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="card rounded-2xl p-6 order-2 md:order-1">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="images/transportation and roadway.jpg" alt="Highway and roadway infrastructure design" class="w-full h-full object-cover" loading="lazy">
+              <img src="images/transportation and roadway.jpg" alt="Highway and roadway infrastructure design" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&q=80'">
             </div>
           </div>
           <div class="order-1 md:order-2">
@@ -514,14 +532,14 @@ PAGES = {
           </div>
           <div class="card rounded-2xl p-6">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="images/pavement and material (capabilities).jpg" alt="Pavement engineering and road construction" class="w-full h-full object-cover" loading="lazy">
+              <img src="images/pavement and material (capabilities).jpg" alt="Pavement engineering and road construction" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80'">
             </div>
           </div>
         </div>
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="card rounded-2xl p-6 order-2 md:order-1">
             <div class="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-              <img src="images/pavement performance study.jpg" alt="Data analytics and infrastructure monitoring" class="w-full h-full object-cover" loading="lazy">
+              <img src="images/pavement performance study.jpg" alt="Data analytics and infrastructure monitoring" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80'">
             </div>
           </div>
           <div class="order-1 md:order-2">
@@ -566,7 +584,7 @@ PAGES = {
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="images/solar and BESS design.webp" alt="Solar energy infrastructure project" class="w-full h-full object-cover" loading="lazy">
+            <img src="images/solar and BESS design.webp" alt="Solar energy infrastructure project" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop&q=80'">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -585,7 +603,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="images/road rehabilitation.jpg" alt="Highway infrastructure and roadway rehabilitation" class="w-full h-full object-cover" loading="lazy">
+            <img src="images/road rehabilitation.jpg" alt="Highway infrastructure and roadway rehabilitation" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&q=80'">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -604,7 +622,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="images/pavement performance study.jpg" alt="Asphalt paving and pavement construction" class="w-full h-full object-cover" loading="lazy">
+            <img src="images/pavement performance study.jpg" alt="Asphalt paving and pavement construction" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80'">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -623,7 +641,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="images/deep foundation design.jpg" alt="Deep foundation construction with drilling rigs and piles" class="w-full h-full object-cover" loading="lazy">
+            <img src="images/deep foundation design.jpg" alt="Deep foundation construction with drilling rigs and piles" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=800&h=600&fit=crop&q=80'">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -642,7 +660,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="images/levee assessment.webp" alt="Water infrastructure and civil engineering project" class="w-full h-full object-cover" loading="lazy">
+            <img src="images/levee assessment.webp" alt="Water infrastructure and civil engineering project" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&q=80'">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -661,7 +679,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
           <div class="aspect-video overflow-hidden bg-gradient-to-br from-cyan-400/10 to-blue-400/10">
-            <img src="images/asphalt material research.jpg" alt="Materials testing and laboratory analysis" class="w-full h-full object-cover" loading="lazy">
+            <img src="images/asphalt material research.jpg" alt="Materials testing and laboratory analysis" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80'">
           </div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
@@ -782,7 +800,7 @@ PAGES = {
       <div class="grid md:grid-cols-2 gap-12 mb-16 max-w-5xl mx-auto">
         <div class="card rounded-2xl p-8 text-center">
           <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden">
-            <img src="images/Arash_Hosseini.jpg" alt="Dr. Arash Hosseini, Co-Founder" class="w-full h-full object-cover" loading="lazy">
+            <img src="images/Arash_Hosseini.jpg" alt="Dr. Arash Hosseini, Co-Founder" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80'">
           </div>
           <h2 class="text-2xl font-semibold mb-2">Dr. Arash Hosseini</h2>
           <p class="text-cyan-400 mb-4">Co-Founder • Ph.D., P.E.</p>
@@ -796,7 +814,7 @@ PAGES = {
         </div>
         <div class="card rounded-2xl p-8 text-center">
           <div class="aspect-square max-w-xs mx-auto mb-6 rounded-2xl overflow-hidden">
-            <img src="images/Dr Ahmed Abdalla.jpeg" alt="Dr. Ahmed Abdalla, Co-Founder" class="w-full h-full object-cover" loading="lazy">
+            <img src="images/Dr Ahmed Abdalla.jpeg" alt="Dr. Ahmed Abdalla, Co-Founder" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80'">
           </div>
           <h2 class="text-2xl font-semibold mb-2">Dr. Ahmed Abdalla</h2>
           <p class="text-cyan-400 mb-4">Co-Founder • Ph.D., P.E.</p>
@@ -1032,7 +1050,7 @@ PAGES = {
         <div class="grid md:grid-cols-2 gap-8 mb-12">
           <article class="card rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform">
             <div class="aspect-video bg-gradient-to-br from-cyan-400/10 to-blue-400/10 relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=675&fit=crop&q=80" alt="Professional engineering podcast recording studio" class="w-full h-full object-cover">
+              <img src="images/podcast-episode-45.jpg" alt="Professional engineering podcast recording studio" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=675&fit=crop&q=80'">
               <div class="absolute inset-0 bg-gradient-to-t from-[#0b1220]/90 to-transparent flex items-end p-6">
                 <div class="text-white">
                   <div class="text-xs uppercase tracking-wider text-cyan-300 mb-2">Featured Podcast</div>
@@ -1098,7 +1116,7 @@ PAGES = {
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80" alt="Road construction and asphalt paving" class="w-full h-full object-cover">
+                <img src="images/pavement performance study.jpg" alt="Road construction and asphalt paving" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80'">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Pavement Engineering</h3>
@@ -1107,7 +1125,7 @@ PAGES = {
             </div>
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=800&h=600&fit=crop&q=80" alt="Geotechnical drilling and soil investigation" class="w-full h-full object-cover">
+                <img src="images/geotechnical and geo structural.jpg" alt="Geotechnical drilling and soil investigation" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=800&h=600&fit=crop&q=80'">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Soil Improvement</h3>
@@ -1116,7 +1134,7 @@ PAGES = {
             </div>
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80" alt="Ground improvement and soil stabilization techniques" class="w-full h-full object-cover">
+                <img src="images/soil improvement.webp" alt="Ground improvement and soil stabilization techniques" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80'">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Unsaturated Soils</h3>
@@ -1125,7 +1143,7 @@ PAGES = {
             </div>
             <div class="card rounded-xl overflow-hidden hover:scale-105 transition-transform">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80" alt="Data visualization and analytics dashboard" class="w-full h-full object-cover">
+                <img src="images/pavement performance study.jpg" alt="Data visualization and analytics dashboard" class="w-full h-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80'">
               </div>
               <div class="p-6 text-center">
                 <h3 class="font-semibold mb-2">Data Analytics</h3>
@@ -1140,7 +1158,7 @@ PAGES = {
           <div class="space-y-4">
             <div class="card rounded-xl overflow-hidden hover:border-cyan-400/30 transition">
               <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200&h=675&fit=crop&q=80" alt="Pavement engineering and road infrastructure" class="w-full h-full object-cover opacity-50">
+                <img src="images/pavement performance study.jpg" alt="Pavement engineering and road infrastructure" class="w-full h-full object-cover opacity-50" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200&h=675&fit=crop&q=80'">
               </div>
               <div class="p-6">
                 <div class="flex items-start justify-between gap-4">
@@ -1164,7 +1182,7 @@ PAGES = {
 
             <div class="card rounded-xl overflow-hidden hover:border-cyan-400/30 transition">
               <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=675&fit=crop&q=80" alt="Data analytics and machine learning for infrastructure" class="w-full h-full object-cover opacity-50">
+                <img src="images/pavement performance study.jpg" alt="Data analytics and machine learning for infrastructure" class="w-full h-full object-cover opacity-50" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=675&fit=crop&q=80'">
               </div>
               <div class="p-6">
                 <div class="flex items-start justify-between gap-4">
@@ -1188,7 +1206,7 @@ PAGES = {
 
             <div class="card rounded-xl overflow-hidden hover:border-cyan-400/30 transition">
               <div class="aspect-video overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=1200&h=675&fit=crop&q=80" alt="Geotechnical engineering drilling and foundation work" class="w-full h-full object-cover opacity-50">
+                <img src="images/geotechnical and geo structural.jpg" alt="Geotechnical engineering drilling and foundation work" class="w-full h-full object-cover opacity-50" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=1200&h=675&fit=crop&q=80'">
               </div>
               <div class="p-6">
                 <div class="flex items-start justify-between gap-4">
@@ -1235,12 +1253,17 @@ PAGES = {
 }
 
 # Generate pages
+from datetime import datetime
+
+current_date = datetime.now().strftime('%Y-%m-%d')
+
 for page_file, page_data in PAGES.items():
+    breadcrumbs = get_breadcrumbs(page_file)
     content = HEAD.format(
         title=page_data['title'],
         description=page_data['description'],
         page=page_file
-    ) + HEADER + page_data['content'] + FOOTER
+    ) + HEADER + (breadcrumbs if breadcrumbs else '') + page_data['content'] + FOOTER
     
     with open(page_file, 'w', encoding='utf-8') as f:
         f.write(content)

@@ -11,21 +11,40 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://zic0n.com/contact.html" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%2322d3ee' d='M3 12L12 3l9 9-9 9-9-9Z'/><path fill='%2360a5fa' d='M12 7v10M7 12h10'/></svg>" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  
   <!-- ======= Preload Critical Resources ======= -->
   <link rel="preconnect" href="https://cdn.tailwindcss.com">
-  <link rel="dns-prefetch" href="https://unpkg.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  
+  <!-- ======= Tailwind (CDN) ======= -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- ======= Fonts / Icons ======= -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/feather-icons"></script>
   
   <!-- ======= Custom Styles ======= -->
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- ======= Open Graph ======= -->
   <meta property="og:title" content="Contact | Zic0n Engineering" />
   <meta property="og:description" content="Contact Zic0n Engineering for engineering consultation, project inquiries, or to discuss your infrastructure needs." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zic0n.com/contact.html" />
+  <meta property="og:image" content="https://zic0n.com/images/og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Zic0n Engineering" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- ======= Twitter Card ======= -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Zic0n Engineering" />
+  <meta name="twitter:description" content="Contact Zic0n Engineering for engineering consultation, project inquiries, or to discuss your infrastructure needs." />
+  <meta name="twitter:image" content="https://zic0n.com/images/og-default.jpg" />
+  <meta name="twitter:site" content="@zic0n" />
 </head>
 
 <body class="antialiased">
@@ -69,7 +88,13 @@
       </nav>
     </div>
   </header>
-  <main id="main-content">
+<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-6 py-4">
+    <ol class="flex items-center gap-2 text-sm text-slate-400">
+      <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+      <li aria-hidden="true"><i data-feather="chevron-right" class="w-4 h-4"></i></li>
+      <li aria-current="page" class="text-cyan-400">Contact</li>
+    </ol>
+  </nav>  <main id="main-content">
   <section class="section py-20">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -79,24 +104,43 @@
       <div class="grid md:grid-cols-2 gap-12">
         <div class="card rounded-2xl p-8">
           <h2 class="text-2xl font-semibold mb-6">Send Us a Message</h2>
-          <form action="mailto:info@zic0n.com" method="post" enctype="text/plain" class="space-y-6">
+          <form id="contactForm" class="space-y-6" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+            <!-- Honeypot field for spam protection -->
+            <input type="hidden" name="form-name" value="contact">
+            <div class="hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </div>
+            
             <div>
-              <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
-              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white transition transform hover:scale-105" placeholder="Your name">
+              <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name <span class="text-red-400">*</span></label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white transition" placeholder="Your name" autocomplete="name">
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white transition transform hover:scale-105" placeholder="your.email@example.com">
+              <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email <span class="text-red-400">*</span></label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white transition" placeholder="your.email@example.com" autocomplete="email">
             </div>
             <div>
-              <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
-              <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white transition transform hover:scale-105" placeholder="Project inquiry">
+              <label for="phone" class="block text-sm font-medium text-slate-300 mb-2">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white transition" placeholder="(555) 123-4567" autocomplete="tel">
             </div>
             <div>
-              <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
-              <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white resize-none transition transform hover:scale-105" placeholder="Tell us about your project..."></textarea>
+              <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject <span class="text-red-400">*</span></label>
+              <select id="subject" name="subject" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white transition">
+                <option value="">Select a topic...</option>
+                <option value="general">General Inquiry</option>
+                <option value="project">Project Consultation</option>
+                <option value="geotechnical">Geotechnical Services</option>
+                <option value="transportation">Transportation Design</option>
+                <option value="pavement">Pavement Engineering</option>
+                <option value="materials">Materials Testing</option>
+                <option value="other">Other</option>
+              </select>
             </div>
-            <button type="submit" class="w-full px-6 py-3 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition">
+            <div>
+              <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message <span class="text-red-400">*</span></label>
+              <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white resize-none transition" placeholder="Tell us about your project..."></textarea>
+            </div>
+            <button type="submit" class="w-full px-6 py-3 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
               Send Message
             </button>
           </form>
@@ -180,5 +224,32 @@
 
   <!-- ======= Custom JavaScript ======= -->
   <script src="app.js"></script>
+  <script src="contact-form.js"></script>
+  
+  <!-- ======= JSON-LD Structured Data ======= -->
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zic0n Engineering",
+    "url": "https://zic0n.com",
+    "logo": "https://zic0n.com/images/logo.png",
+    "description": "Partner-led civil engineering practice providing geotechnical, transportation, pavements & materials expertise.",
+    "address": {{
+      "@type": "PostalAddress",
+      "addressLocality": "San Diego",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }},
+    "contactPoint": {{
+      "@type": "ContactPoint",
+      "email": "info@zic0n.com",
+      "contactType": "Customer Service"
+    }},
+    "sameAs": [
+      "https://www.linkedin.com/company/zic0n"
+    ]
+  }}
+  </script>
 </body>
 </html>
